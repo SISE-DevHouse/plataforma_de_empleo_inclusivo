@@ -38,10 +38,11 @@
                     <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
                     @else
                     <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Iniciar sesion</a></li>
+
                     @if (Route::has('register'))
                     <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Registrarse</a></li>
-
                     @endif
+
                     @endauth
                 </ul>
             </div>
