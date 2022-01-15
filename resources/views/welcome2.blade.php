@@ -1,54 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plataforma de Empleo Inclusivo</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main">
+@section('content')
 
 
-    
-
-</head>
-
-<body>
-
-    <!--Navbar-->
-
-    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">
-                <img src="img/CP Inclusion-blanco.png" alt="" width="250">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!--nav justify-content-end navbar izquierda-->
-
-            @if (Route::has('login'))
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto" style="font-size: 18px; ">
-                    @auth
-                    <li class="nav-item"><a class="nav-link" href="{{ url('/home') }}">Inicio</a></li>
-                    <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-                    @else
-                    <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Iniciar sesion</a></li>
-
-                    @if (Route::has('register'))
-                    <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Registrarse</a></li>
-                    @endif
-
-                    @endauth
-                </ul>
-            </div>
-            @endif
-
-        </div>
-    </nav>
 <!--
     
     @if (Route::has('login'))
@@ -139,6 +93,4 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
-</body>
-
-</html>
+@endsection
