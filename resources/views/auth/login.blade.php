@@ -72,6 +72,11 @@
                                 {{ __('Remember Me') }}
                             </label>
                         </div>
+                    </div>
+                    <div class="flex-sb-m w-full p-t-3 p-b-24">
+                        <div class="contact100-form-checkbox">
+                            <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Registrarse</a></li>
+                        </div>
 
                         <div>
                             @if (Route::has('password.request'))
@@ -81,9 +86,8 @@
                             @endif
                         </div>
                     </div>
-
                     <div class="container-login100-form-btn m-t-17">
-                        <button type="submit" class="login100-form-btn">
+                        <button type="submit" class="btn login100-form-btn">
                             {{ __('Login') }}
                         </button>
                     </div>
