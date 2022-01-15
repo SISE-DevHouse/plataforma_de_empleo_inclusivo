@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plataforma de Empleo Inclusivo</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+@section('content')
 
 
-    <style>
+<style>
     .divider:after,
     .divider:before {
         content: "";
@@ -19,22 +13,25 @@
     }
 
     .h-custom {
-        height: calc(100% - 73px);
+        height: calc(100%);
+    }
+
+    .pabsolutetop{
+        position: absolute;
+        top:0px;
+        width: 100%;
+        height: calc(100% - 72px);
     }
 
     @media (max-width: 450px) {
         .h-custom {
-            height: 100%;
+            height: calc(100% - 73px);
         }
     }
     </style>
-</head>
-
-<body>
 
 
-
-    <section class="vh-100">
+<section class="pabsolutetop">
         <div class="container-fluid h-custom">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-md-9 col-lg-6 col-xl-5">
@@ -135,6 +132,4 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
-</body>
-
-</html>
+@endsection
