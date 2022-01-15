@@ -5,4 +5,10 @@ composer install
 // es necesario solicitar via correo el archivo .env
 
 // Levantar el proyecto en artisan
-php artisan server
+php artisan serve
+
+
+// Migrar tablas  a la bd.
+php artisan migrate
+
+
