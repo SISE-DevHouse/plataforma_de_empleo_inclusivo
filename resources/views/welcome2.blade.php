@@ -28,12 +28,14 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto" style="font-size: 18px; ">
                     <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Ingresar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Ingresar</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Contactanos</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+<!--
+    
     @if (Route::has('login'))
         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
             @auth
@@ -47,7 +49,7 @@
             @endauth
         </div>
     @endif
-
+    -->
     <!--Cuepo-->
 
     <div class="container-fluid">
