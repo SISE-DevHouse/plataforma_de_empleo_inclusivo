@@ -62,6 +62,14 @@
                         <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                     </li>
                     @endif
+
+ 
+                    @if (Route::has('enviar-solicitud'))
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('enviar-solicitud') }}">{{ __('Enviar Solicitud') }}</a>
+                    </li> 
+                    @endif
+                    
                     @else
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"

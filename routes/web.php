@@ -18,6 +18,9 @@ Route::get('/', function () {
     return view('welcome2');
 });
 
+ 
+Route::get('/enviar-solicitud', [App\Http\Controllers\RegistroempresasController::class, 'index'])->name('enviar-solicitud');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
