@@ -32,9 +32,6 @@
             @if (Route::has('login'))
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto" style="font-size: 18px; ">
-                    <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Ingresar</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contactanos</a></li>
                     @auth
                     <li class="nav-item"><a class="nav-link" href="{{ url('/home') }}">Inicio</a></li>
                     <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
@@ -100,7 +97,11 @@
             <div class="col-4 ps-4 py-1"><img src="img/imagen2.jpg" class="img-fluid rounded-pill" alt=""></div>
             <div class="col-8 text-center py-5">
                 <p class="fs-3">Registrate ahora y empieza a tener propuestas laborales.</p>
-                <button type="button" class="btn btn-outline-secondary btn-lg">Registrarse</button>
+
+                
+                @if (Route::has('register')) 
+                <a class="btn btn-outline-secondary btn-lg" href="{{ route('register') }}">Registrarse</a>
+                    @endif
             </div>
 
         </div>
