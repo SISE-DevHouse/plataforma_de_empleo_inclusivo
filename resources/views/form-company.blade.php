@@ -1,7 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
-
+ 
 <section>
 
     <div class="container-fluid h-custom py-4">
@@ -14,6 +11,7 @@
 
                 
                         <div class="col-12 py-4 ps-5">
+                        
                         <img src="img/imagen1.jpg" class="img-fluid rounded-pill" alt="">
                             <p class="fs-1" style="color: rgb(206, 117, 29);">Conviertete hoy en una empresa inclusiva.
                         </div>
@@ -162,5 +160,4 @@
 
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-
-@endsection
+ 
