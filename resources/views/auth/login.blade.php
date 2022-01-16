@@ -17,7 +17,7 @@
 }
 
 .pabsolutetop {
-    position: absolute;
+    position: relative;
     top: 0px;
     width: 100%;
     height: calc(100% - 72px);
@@ -32,17 +32,22 @@
 </style>
 
 
-<section class="pabsolutetop">
+<section class="pabsolutetop py-4">
     <div class="container-fluid h-custom">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-md-9 col-lg-6 col-xl-5">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
-                    class="img-fluid" alt="Sample image">
+            <div class="col-12 py-4 ps-5">
+                        
+                        <img src="img/imagen2.jpg" class="img-fluid rounded-pill" alt="">
+                        <h1 class="display-4" style="color: rgb(158, 77, 19);">Generando la igualdad de oportunidades.
+            </h1>
+                        </div>
             </div>
             <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
 
                 <form class="login100-form validate-form flex-sb flex-w" method="POST" action="{{ route('login') }}">
 
+                <h2 class="text-muted">¡Trabaja sin limites!</h2>
                     @csrf<div
                         class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
                         <p class="lead fw-normal mb-0 me-3">Inicia Session</p>
