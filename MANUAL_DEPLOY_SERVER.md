@@ -1,4 +1,3 @@
-
 // Instalar dependencias de composer.
 composer install
 
@@ -10,5 +9,4 @@ php artisan serve
 
 // Migrar tablas  a la bd.
 php artisan migrate
-
 
