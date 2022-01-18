@@ -1,7 +1,11 @@
 <?php
 
+use App\Models\registroempresas;
+use App\Http\Controllers\RegistroempresasController;
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +25,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//el nombre que es? xd
+//Route::get('/home/empresas', [App\Http\Controllers\RegistroempresasController::class, 'index'])->name('registroempresa');
+
+Route::resource('registroempresa', RegistroempresasController::class);

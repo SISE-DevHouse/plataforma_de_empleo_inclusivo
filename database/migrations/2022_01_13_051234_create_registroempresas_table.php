@@ -15,6 +15,15 @@ class CreateRegistroempresasTable extends Migration
     {
         Schema::create('registroempresas', function (Blueprint $table) {
             $table->id();
+
+            $table->string('codigoempresa');
+            $table->string('nombreempresa');
+            $table->string('ruc');
+            $table->string('telefono');
+            $table->string('correo');
+            $table->string('direccion');
+            $table->string('distrito');
+
             $table->timestamps();
         });
     }

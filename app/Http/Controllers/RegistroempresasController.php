@@ -14,6 +14,9 @@ class RegistroempresasController extends Controller
      */
     public function index()
     {
+        $datos['registroempresasss'] = registroempresas::paginate(5);
+        return view('registroempresa.index', $datos);
+
         //
     }
 
@@ -25,6 +28,7 @@ class RegistroempresasController extends Controller
     public function create()
     {
         //
+        return view('registroempresa.create');
     }
 
     /**
@@ -35,7 +39,12 @@ class RegistroempresasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //guardamos todo menos el token
+        $arrdatos = request()->except('_token');
+        registroempresas::insert($arrdatos);
+
+        //return response()->json($arrdatos);
+        return redirect('registroempresa');
     }
 
     /**
@@ -55,9 +64,12 @@ class RegistroempresasController extends Controller
      * @param  \App\Models\registroempresas  $registroempresas
      * @return \Illuminate\Http\Response
      */
-    public function edit(registroempresas $registroempresas)
+    public function edit($id)
     {
-        //
+        //findOrFail es para buscar x el id
+        $datos = registroempresas::findOrFail($id);
+        //compact es para pasar los datos
+        return view('registroempresa.edit', compact('datos'));
     }
 
     /**
@@ -67,9 +79,16 @@ class RegistroempresasController extends Controller
      * @param  \App\Models\registroempresas  $registroempresas
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, registroempresas $registroempresas)
+    public function update(Request $request, $id)
     {
-        //
+        //en esta ocasion se excluye tambien el metodo
+        $arrdatos = request()->except('_token', '_method');
+        //aca preguntamos si el id de lo que quiere eliminar es = $id, lo esta buscndo entre todos los existentes 
+        registroempresas::where('id', '=', $id)->update($arrdatos);
+        //findOrFail es para buscar x el id
+        $datos = registroempresas::findOrFail($id);
+        //compact es para pasar los datos
+        return view('registroempresa.edit', compact('datos'));
     }
 
     /**
@@ -78,8 +97,10 @@ class RegistroempresasController extends Controller
      * @param  \App\Models\registroempresas  $registroempresas
      * @return \Illuminate\Http\Response
      */
-    public function destroy(registroempresas $registroempresas)
+    public function destroy($id)
     {
+        registroempresas::destroy($id);
+        return redirect('registroempresa');
         //
     }
 }
