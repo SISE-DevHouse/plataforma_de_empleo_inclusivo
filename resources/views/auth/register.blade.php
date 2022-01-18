@@ -40,7 +40,7 @@
                             @enderror
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="password" class="form-control" id="password-confirm">
+                            <input type="password" class="form-control" id="password-confirm" name="password_confirmation" required autocomplete="new-password">
                             <label for="floatingPassword">password-confirm</label>
                         </div>
                         <!-- -->
