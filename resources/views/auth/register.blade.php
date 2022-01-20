@@ -40,7 +40,11 @@
                             @enderror
                         </div>
                         <div class="form-floating mb-3">
+<<<<<<< HEAD
                             <input type="password" class="form-control" @error('password-confirm') is-invalid @enderror" name="password-confirm" required autocomplete="new-password" id="password-confirm">
+=======
+                            <input type="password" class="form-control" id="password-confirm" name="password_confirmation" required autocomplete="new-password">
+>>>>>>> 75ff8ab8abc1f80a3933b78acecda11b6261c44f
                             <label for="floatingPassword">password-confirm</label>
                             @error('password-confirm')
                             <span class="invalid-feedback" role="alert">
