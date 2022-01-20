@@ -30,7 +30,13 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::get('/EditarPerfil/{id}','App\Http\Controllers\EditarperfilController@edit');
+
+
+
+
+Route::GET('EditarPerfil/{id}','App\Http\Controllers\EditarperfilController@edit');
+
+Route::PATCH('EditarPerfil/{id}','App\Http\Controllers\EditarperfilController@update');
 
 
 Route::resource('registroempresa', RegistroempresasController::class);

@@ -45,7 +45,16 @@
                 <div class="col-md-4 left-co">
                     <div class="left-side">
                         <div class="profile-info">
-                            <img src="assets/images/usuario.png" alt="">
+
+                            @if (isset(Auth::user()->foto))
+
+                            <img src="{{asset('storage').'/'.Auth::user()->foto}}">
+                      @else
+                      <img src="assets/images/usuario.png">
+        
+                            @endif
+                            
+                            
                             <h3>{{ Auth::user()->name }}</h3>
                             <span>USUARIO</span>
                         </div>

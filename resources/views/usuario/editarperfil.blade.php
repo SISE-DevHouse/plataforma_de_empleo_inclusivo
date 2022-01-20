@@ -41,30 +41,52 @@
 </div>
 -->
 
+<form method="POST" action="{{Url('EditarPerfil',Auth::user()->id)}}"  role="form" enctype="multipart/form-data">
+    
+    {{ method_field('PATCH') }}
+    @csrf
+
+  
+
+
+
+
+
+
     <div class="container-fluid overcover">
         <div class="container profile-box">
             <div class="row">
                 <div class="col-md-4 left-co">
                     <div class="left-side">
                         <div class="profile-info">
-                            <img src="/assets/images/usuario.png" alt="">
+
+                            @if(isset($perfil->foto))
+            <img src="{{asset('storage').'/'.$perfil->foto}}" alt="160" width="160">
+        @endisset
                             <h3>{{ Auth::user()->name }}</h3>
 
                             <span>USUARIO</span>
-                            <span><input type="file"  class="form-control"></span>
+
+                            <span><input type="file" name="foto" id="foto" class="form-control"></span>
+
                         </div>
-                        <div class="center">
-                        
-                    </div>
+                            <div class="center">
+
+                               
+                                <button type="submit" class="btn btn-primary">GUARDAR</button>
+                            </div>
                         <h4 class="ltitle">Información Personal</h4>
                         <div class="contact-box pb0">
                             <div class="icon">
                                 <i class="fas fa-phone"></i>
                             </div>
+                        
+                                
+                           
                             <div class="detail">
 
-                                <input type="text" placeholder="Telefono" class="form-control" value="{{ $perfil->telefono}}">
-                                <input type="text" placeholder="Telefono Opcional" class="form-control" value="{{ $perfil->telefono2}}">
+                                <input type="text" placeholder="Telefono" class="form-control" name="telefono" id="telefono" value="{{isset($perfil->telefono)?$perfil->telefono:''}}">
+                                <input type="text" placeholder="Telefono Opcional" class="form-control" value="{{ isset($perfil->telefono2)?$perfil->telefono2:''}}">
                                 
                             </div>
                         </div>
@@ -73,7 +95,7 @@
                                 <i class="fas fa-globe-americas"></i>
                             </div>
                             <div class="detail">
-                                <input type="text" placeholder="Email" class="form-control" value="{{ $perfil->email}}">
+                                <input type="text" placeholder="Email" class="form-control" value="{{ isset($perfil->email)?$perfil->email:''}}">
 
                             </div>
                         </div>
@@ -83,14 +105,14 @@
                             </div>
                             <div class="detail">
                                 
-                                <input type="text" placeholder="Email" class="form-control" value="{{ $perfil->direccion}}">
+                                <input type="text" placeholder="Email" class="form-control" value="{{ isset($perfil->direccion)?$perfil->direccion:''}}">
                             </div>
                         </div>
                         <h4 class="ltitle">Contacto</h4>
                         <ul class="row social-link no-margin">
 
-                            <li><i class="fab fa-whatsapp"> {{Auth::user()->telefono}}</i></li>
-                            <li><i class="fab fa-google-plus-g"> {{ Auth::user()->email }}</i></li>
+                            <li><i class="fab fa-whatsapp"> {{isset(Auth::user()->telefono)?Auth::user()->telefono:''}}</i></li>
+                            <li><i class="fab fa-google-plus-g"> {{ isset(Auth::user()->email)?Auth::user()->email:''}}</i></li>
 
 
                         </ul>
@@ -112,7 +134,7 @@
                 <div class="col-md-8 rt-div">
                     <div class="rit-cover">
                         <div class="hotkey">
-                            <h1 class="">{{ Auth::user()->name }} <br> {{ Auth::user()->apellidos }} </h1>
+                            <h1 class="">{{ isset(Auth::user()->name)?Auth::user()->name:'' }} <br> {{ isset(Auth::user()->apellidos)?Auth::user()->apellidos:'' }} </h1>
                             <small>INFORMACIÓN</small>
                         </div>
                         <h2 class="rit-titl"><i class="far fa-user"></i> Perfil</h2>
@@ -211,6 +233,8 @@
             </div>
         </div>
     </div>
+
+</form>
 
 </body>
 
