@@ -3,35 +3,6 @@
 @section('content')
 
 
-<style>
-.divider:after,
-.divider:before {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: #eee;
-}
-
-.h-custom {
-    height: calc(100%);
-}
-
-.pabsolutetop {
-    position: relative;
-    top: 0px;
-    width: 100%;
-    height: calc(100% - 72px);
-    z-index: -1;
-}
-
-@media (max-width: 450px) {
-    .h-custom {
-        height: calc(100% - 73px);
-    }
-}
-</style>
-
-
 <section class="pabsolutetop py-4">
     <div class="container-fluid h-custom">
         <div class="row d-flex justify-content-center align-items-center h-100">
@@ -78,7 +49,7 @@
                             type="password" name="password" placeholder="{{ __('Password') }} " required
                             autocomplete="current-password">
 
-                        @error('password')
+                        @error('password') 
                         <span class="focus-input100 invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
