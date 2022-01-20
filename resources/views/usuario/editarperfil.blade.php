@@ -1,3 +1,5 @@
+
+
 @extends('layouts.app')
 
 @section('content')
@@ -9,10 +11,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title> Free Dental Medical Hospital Website Template | Smarteyeapps.com</title>
 
-    <link rel="shortcut icon" href="assets/images/fav.jpg">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/fontawsom-all.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="shortcut icon" href="/assets/images/fav.jpg">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/fontawsom-all.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
 </head>
 
 <body>
@@ -45,12 +47,14 @@
                 <div class="col-md-4 left-co">
                     <div class="left-side">
                         <div class="profile-info">
-                            <img src="assets/images/usuario.png" alt="">
+                            <img src="/assets/images/usuario.png" alt="">
                             <h3>{{ Auth::user()->name }}</h3>
+
                             <span>USUARIO</span>
+                            <span><input type="file"  class="form-control"></span>
                         </div>
                         <div class="center">
-                        <a href="{{url('EditarPerfil', Auth::user()->id)}}" class="btn btn-warning">Editar Perfil</a>
+                        
                     </div>
                         <h4 class="ltitle">Información Personal</h4>
                         <div class="contact-box pb0">
@@ -58,8 +62,10 @@
                                 <i class="fas fa-phone"></i>
                             </div>
                             <div class="detail">
-                                {{ Auth::user()->telefono }} <br>
-                                {{ Auth::user()->telefono2 }}
+
+                                <input type="text" placeholder="Telefono" class="form-control" value="{{ $perfil->telefono}}">
+                                <input type="text" placeholder="Telefono Opcional" class="form-control" value="{{ $perfil->telefono2}}">
+                                
                             </div>
                         </div>
                         <div class="contact-box pb0">
@@ -67,7 +73,7 @@
                                 <i class="fas fa-globe-americas"></i>
                             </div>
                             <div class="detail">
-                                {{ Auth::user()->email }}<br>
+                                <input type="text" placeholder="Email" class="form-control" value="{{ $perfil->email}}">
 
                             </div>
                         </div>
@@ -76,7 +82,8 @@
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div class="detail">
-                                {{ Auth::user()->direccion }}
+                                
+                                <input type="text" placeholder="Email" class="form-control" value="{{ $perfil->direccion}}">
                             </div>
                         </div>
                         <h4 class="ltitle">Contacto</h4>
@@ -208,9 +215,9 @@
 </body>
 
 
-<script src="assets/js/jquery-3.2.1.min.js"></script>
-<script src="assets/js/popper.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/script.js"></script>
+<script src="/assets/js/jquery-3.2.1.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/script.js"></script>
 
 @endsection

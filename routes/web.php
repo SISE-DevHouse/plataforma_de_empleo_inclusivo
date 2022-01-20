@@ -2,6 +2,7 @@
 
 use App\Models\registroempresas;
 use App\Http\Controllers\RegistroempresasController;
+use App\Http\Controllers\EditarperfilController;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -19,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome2');
+    return view('welcome');
 });
 
 
@@ -27,5 +28,9 @@ Route::get('/enviar-solicitud', [App\Http\Controllers\RegistroempresasController
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::get('/EditarPerfil/{id}','App\Http\Controllers\EditarperfilController@edit');
+
 
 Route::resource('registroempresa', RegistroempresasController::class);
