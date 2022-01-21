@@ -3,10 +3,6 @@
 @section('content')
 
 
-<style>
-</style>
-
-
 <section class="pabsolutetop py-4">
     <div class="container-fluid h-custom">
         <div class="row d-flex justify-content-center align-items-center h-100">

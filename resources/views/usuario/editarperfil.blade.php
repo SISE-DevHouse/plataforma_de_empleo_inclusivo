@@ -1,3 +1,5 @@
+
+
 @extends('layouts.app')
 
 @section('content')
@@ -9,10 +11,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title> Free Dental Medical Hospital Website Template | Smarteyeapps.com</title>
 
-    <link rel="shortcut icon" href="assets/images/fav.jpg">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/fontawsom-all.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="shortcut icon" href="/assets/images/fav.jpg">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/fontawsom-all.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
 </head>
 
 <body>
@@ -39,6 +41,18 @@
 </div>
 -->
 
+<form method="POST" action="{{Url('EditarPerfil',Auth::user()->id)}}"  role="form" enctype="multipart/form-data">
+    
+    {{ method_field('PATCH') }}
+    @csrf
+
+  
+
+
+
+
+
+
     <div class="container-fluid overcover">
         <div class="container profile-box">
             <div class="row">
@@ -46,29 +60,34 @@
                     <div class="left-side">
                         <div class="profile-info">
 
-                            @if (isset(Auth::user()->foto))
-
-                            <img src="{{asset('storage').'/'.Auth::user()->foto}}">
-                      @else
-                      <img src="assets/images/usuario.png">
-        
-                            @endif
-                            
-                            
+                            @if(isset($perfil->foto))
+            <img src="{{asset('storage').'/'.$perfil->foto}}" alt="160" width="160">
+        @endisset
                             <h3>{{ Auth::user()->name }}</h3>
+
                             <span>USUARIO</span>
+
+                            <span><input type="file" name="foto" id="foto" class="form-control"></span>
+
                         </div>
-                        <div class="center">
-                        <a href="{{url('EditarPerfil', Auth::user()->id)}}" class="btn btn-warning">Editar Perfil</a>
-                    </div>
+                            <div class="center">
+
+                               
+                                <button type="submit" class="btn btn-primary">GUARDAR</button>
+                            </div>
                         <h4 class="ltitle">Información Personal</h4>
                         <div class="contact-box pb0">
                             <div class="icon">
                                 <i class="fas fa-phone"></i>
                             </div>
+                        
+                                
+                           
                             <div class="detail">
-                                {{ Auth::user()->telefono }} <br>
-                                {{ Auth::user()->telefono2 }}
+
+                                <input type="text" placeholder="Telefono" class="form-control" name="telefono" id="telefono" value="{{isset($perfil->telefono)?$perfil->telefono:''}}">
+                                <input type="text" placeholder="Telefono Opcional" class="form-control" value="{{ isset($perfil->telefono2)?$perfil->telefono2:''}}">
+                                
                             </div>
                         </div>
                         <div class="contact-box pb0">
@@ -76,7 +95,7 @@
                                 <i class="fas fa-globe-americas"></i>
                             </div>
                             <div class="detail">
-                                {{ Auth::user()->email }}<br>
+                                <input type="text" placeholder="Email" class="form-control" value="{{ isset($perfil->email)?$perfil->email:''}}">
 
                             </div>
                         </div>
@@ -85,14 +104,15 @@
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div class="detail">
-                                {{ Auth::user()->direccion }}
+                                
+                                <input type="text" placeholder="Email" class="form-control" value="{{ isset($perfil->direccion)?$perfil->direccion:''}}">
                             </div>
                         </div>
                         <h4 class="ltitle">Contacto</h4>
                         <ul class="row social-link no-margin">
 
-                            <li><i class="fab fa-whatsapp"> {{Auth::user()->telefono}}</i></li>
-                            <li><i class="fab fa-google-plus-g"> {{ Auth::user()->email }}</i></li>
+                            <li><i class="fab fa-whatsapp"> {{isset(Auth::user()->telefono)?Auth::user()->telefono:''}}</i></li>
+                            <li><i class="fab fa-google-plus-g"> {{ isset(Auth::user()->email)?Auth::user()->email:''}}</i></li>
 
 
                         </ul>
@@ -114,7 +134,7 @@
                 <div class="col-md-8 rt-div">
                     <div class="rit-cover">
                         <div class="hotkey">
-                            <h1 class="">{{ Auth::user()->name }} <br> {{ Auth::user()->apellidos }} </h1>
+                            <h1 class="">{{ isset(Auth::user()->name)?Auth::user()->name:'' }} <br> {{ isset(Auth::user()->apellidos)?Auth::user()->apellidos:'' }} </h1>
                             <small>INFORMACIÓN</small>
                         </div>
                         <h2 class="rit-titl"><i class="far fa-user"></i> Perfil</h2>
@@ -214,12 +234,14 @@
         </div>
     </div>
 
+</form>
+
 </body>
 
 
-<script src="assets/js/jquery-3.2.1.min.js"></script>
-<script src="assets/js/popper.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/script.js"></script>
+<script src="/assets/js/jquery-3.2.1.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/script.js"></script>
 
 @endsection
