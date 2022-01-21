@@ -44,7 +44,7 @@ class RegistroempresasController extends Controller
         registroempresas::insert($arrdatos);
 
         //return response()->json($arrdatos);
-        return redirect('registroempresa');
+        return redirect('home/registroempresa');
     }
 
     /**

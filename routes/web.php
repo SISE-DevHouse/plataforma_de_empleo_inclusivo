@@ -23,9 +23,12 @@ Route::get('/', function () {
 });
 
 
+/**/
 Route::get('/enviar-solicitud', [App\Http\Controllers\RegistroempresasController::class, 'index'])->name('enviar-solicitud');
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+/*para vincular esta ruta con el controlador y su metodo ofuncion, y el middleware para ver si es postulante*/
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth.postulante');
 
-Route::resource('registroempresa', RegistroempresasController::class);
+/*para vincular todas las rutas y todos lo metodos del controlador, y el middleware para ver si es empresa*/
+Route::resource('/home/registroempresa', RegistroempresasController::class)->middleware('auth.registroempresa');

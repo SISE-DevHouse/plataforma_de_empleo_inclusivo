@@ -1,3 +1,4 @@
+solo es un ejm de crud
 <label for="">codigoempresa</label>
 <!-- el campo name tiene que ser igual al canpo de la BD -->
 <!-- value="{{isset($datos->codigoempresa)?$datos->codigoempresa:''}}"
@@ -25,4 +26,4 @@
 <button>enviar</button>
 <br>
 <br>
-<a href="{{url('registroempresa')}}">regresar</a>
+<a href="{{url('home/registroempresa')}}">regresar</a>

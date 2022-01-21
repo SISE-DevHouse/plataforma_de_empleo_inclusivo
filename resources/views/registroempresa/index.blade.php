@@ -1,5 +1,8 @@
-la vista index empresas
-<a href="{{url('registroempresa/create')}}">Nuevo registro</a>
+@extends('layouts.app')
+
+@section('content')
+aca listamos a los postulantes
+<a href="{{url('home/registroempresa/create')}}">Nuevo registro</a>
 <table class="">
     <thead>
         <tr>
@@ -27,7 +30,7 @@ la vista index empresas
             <td>{{ $indice->direccion }}</td>
             <td>{{ $indice->distrito }}</td>
             <td>
-                <a type="submit" href="{{ url('/registroempresa/'.$indice->id.'/edit')}}">editar</a>
+                <a type="submit" href="{{ url('home/registroempresa/'.$indice->id.'/edit')}}">editar</a>
                 <form action="{{ url('/registroempresa/'.$indice->id)}}" method="POST">
                     @csrf
                     <!-- para convertir el metodo POST a DELETE -->
@@ -40,3 +43,4 @@ la vista index empresas
     </tbody>
 
 </table>
+@endsection

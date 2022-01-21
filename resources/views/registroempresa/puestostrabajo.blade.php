@@ -1,0 +1,1 @@
+este sera el inicio del crud para una tabla puestos
