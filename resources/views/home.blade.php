@@ -17,6 +17,7 @@
 
 <body>
 
+
     <!--  DESCOMENTAR
 <div class="container">
     <div class="row justify-content-center">
@@ -88,6 +89,29 @@
                                 {{ Auth::user()->direccion }}
                             </div>
                         </div>
+
+                        <div class="contact-box">
+                            <div class="icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="detail">
+                                {{ Auth::user()->dni }}
+                            </div>
+                        </div>
+
+                       
+                        <div class="contact-box">
+                            <div class="icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="detail">
+                                Discapacidad: <br>
+                                {{Auth::user()->tipodiscapacidad}}
+                            </div>
+                        </div>
+
+
+
                         <h4 class="ltitle">Contacto</h4>
                         <ul class="row social-link no-margin">
 
@@ -213,7 +237,7 @@
             </div>
         </div>
     </div>
-
+   
 </body>
 
 
@@ -221,5 +245,6 @@
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/script.js"></script>
+
 
 @endsection

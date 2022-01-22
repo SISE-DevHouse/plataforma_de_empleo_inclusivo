@@ -85,17 +85,36 @@
                            
                             <div class="detail">
 
-                                <input type="text" placeholder="Telefono" class="form-control" name="telefono" id="telefono" value="{{isset($perfil->telefono)?$perfil->telefono:''}}">
-                                <input type="text" placeholder="Telefono Opcional" class="form-control" value="{{ isset($perfil->telefono2)?$perfil->telefono2:''}}">
+                                <input type="text" placeholder="Telefono" required class="form-control" name="telefono" id="telefono" value="{{ isset($perfil->telefono)?$perfil->telefono:''}}">
+                                
                                 
                             </div>
                         </div>
+
+                        <div class="contact-box pb0">
+                            <div class="icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                        
+                                
+                           
+                            <div class="detail">
+
+                                
+                                <input type="text" placeholder="Telefono Opcional" class="form-control" name="telefono2"  value="{{ isset($perfil->telefono2)?$perfil->telefono2:''}}">
+                                
+                            </div>
+                        </div>
+
+
+
+
                         <div class="contact-box pb0">
                             <div class="icon">
                                 <i class="fas fa-globe-americas"></i>
                             </div>
                             <div class="detail">
-                                <input type="text" placeholder="Email" class="form-control" value="{{ isset($perfil->email)?$perfil->email:''}}">
+                                <input type="text" placeholder="Email" class="form-control" name="email" value="{{ isset($perfil->email)?$perfil->email:''}}">
 
                             </div>
                         </div>
@@ -105,9 +124,42 @@
                             </div>
                             <div class="detail">
                                 
-                                <input type="text" placeholder="Email" class="form-control" value="{{ isset($perfil->direccion)?$perfil->direccion:''}}">
+                                <input type="text" placeholder="Direccion" class="form-control" name="direccion" value="{{ isset($perfil->direccion)?$perfil->direccion:''}}">
+                            </div>
+
+                        
+                        </div>
+
+                        <div class="contact-box">
+                            <div class="icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="detail">
+                                
+                                <input type="text" placeholder="DNI" class="form-control" name="dni" value="{{ isset($perfil->dni)?$perfil->dni:''}}">
+                            </div>
+
+                        
+                        </div>
+
+                        <div class="contact-box">
+                            <div class="icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="detail">
+                                <select name="tipodiscapacidad" id="tipodiscapacidad" class="form-control" >
+                                    <option value="{{isset(Auth::user()->tipodiscapacidad)?Auth::user()->tipodiscapacidad:''}}">Seleccione: {{isset(Auth::user()->tipodiscapacidad)?Auth::user()->tipodiscapacidad:''}}</option>
+                                    <option value="Fisica">Fisica</option>
+                                    <option value="Mental">Mental</option>
+                                    <option value="Sensorial">Sensorial</option>
+                                    <option value="Intelectual">Intelectual</option>
+                                </select>
                             </div>
                         </div>
+
+
+
+
                         <h4 class="ltitle">Contacto</h4>
                         <ul class="row social-link no-margin">
 
@@ -158,15 +210,9 @@
 
                         <h2 class="rit-titl"><i class="fas fa-briefcase"></i> Experiencia</h2>
                         <div class="work-exp">
-                            <h6>Junior Software Developer <span>2008-2011</span></h6>
-                            <i>Microsoft / United States</i>
-                            <ul>
-                                <li><i class="far fa-hand-point-right"></i> Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit. </li>
-                                <li><i class="far fa-hand-point-right"></i> Sorem dolor sit amet, consectetur. </li>
-                                <li><i class="far fa-hand-point-right"></i> Porem ipsum sit amet, consectetur adipiscing
-                                </li>
-                            </ul>
+                           
+                           <textarea name="" id="" placeholder="ESCRIBIR EXPERIENCIA" cols="68" rows="10"></textarea>
+                           
                         </div>
 
 
@@ -174,52 +220,23 @@
                         <h2 class="rit-titl"><i class="fas fa-graduation-cap"></i> Educación</h2>
                         <div class="education">
                             <ul class="row no-margin">
-                                <li class="col-md-6"><span>2013-2015</span> <br>
-                                    Master Degree - Cambridg University</li>
-                                <li class="col-md-6"><span>2013-2015</span> <br>
-                                    Master Degree - Cambridg University</li>
-                                <li class="col-md-6"><span>2013-2015</span> <br>
-                                    Master Degree - Cambridg University</li>
-                                <li class="col-md-6"><span>2013-2015</span> <br>
-                                    Master Degree - Cambridg University</li>
+                                <li class="col-md-6"><span>Educación</span> <br>
+                                    <select name="" id="" class="form-control">
+                                        <option value="">Primaria</option>
+                                        <option value="">Secundaria</option>
+                                        <option value="">Tecnico</option>
+                                        <option value="">Superior</option>
+                                    </select>
+                                </li>
+                                <li class="col-md-6"><span>Expecifique</span> <br>
+                                    <textarea name="" id="" cols="30" rows="2"></textarea></li>
+                                
                             </ul>
                         </div>
 
                         <h2 class="rit-titl"><i class="fas fa-users-cog"></i> Habilidades</h2>
                         <div class="profess-cover row no-margin">
-                            <div class="col-md-6">
-                                <div class=" prog-row row">
-                                    <div class="col-sm-6">
-                                        Photoshop
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="row prog-row">
-                                    <div class="col-sm-6">
-                                        PHP
-                                    </div>
-
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="row prog-row">
-                                    <div class="col-sm-6">
-                                        Web Design
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="row prog-row">
-                                    <div class="col-sm-6">
-                                        Web Development
-                                    </div>
-
-                                </div>
+                           <textarea name="" id="" cols="68" rows="5"></textarea>
                             </div>
 
 

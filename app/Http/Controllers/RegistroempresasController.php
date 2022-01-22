@@ -20,6 +20,17 @@ class RegistroempresasController extends Controller
         //
     }
 
+    public function solicitud()
+    {
+       
+        return view('form-company');
+
+        //
+    }
+
+
+
+
     /**
      * Show the form for creating a new resource.
      *

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRegistroempresasTable extends Migration
+class CreateEmpresasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,18 @@ class CreateRegistroempresasTable extends Migration
      */
     public function up()
     {
-        Schema::create('registroempresas', function (Blueprint $table) {
+        Schema::create('empresas', function (Blueprint $table) {
+            $table->engine="InnoDB";
             $table->id();
-
-            $table->string('codigoempresa');
             $table->string('nombreempresa');
             $table->string('ruc');
             $table->string('telefono');
             $table->string('correo');
             $table->string('direccion');
-            $table->string('distrito');
-
+            $table->bigInteger('id_distrito')->unsigned();
             $table->timestamps();
+
+            $table->foreign('id_distrito')->references('id')->on('distritos')->onDelete('cascade');
         });
     }
 
@@ -35,6 +35,6 @@ class CreateRegistroempresasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('registroempresas');
+        Schema::dropIfExists('empresas');
     }
 }

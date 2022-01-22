@@ -47,6 +47,39 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
 
+                @if(Auth::check()&&Auth::user()->role=="administrador" )
+
+
+    
+
+
+                <ul class="navbar-nav me-auto">
+
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('empresas.index') }}"><i class="fa fa-apple"> {{ __('Empresas') }}</i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('distritos.index') }}"><i class="fa fa-apple"> {{ __('Distritos') }}</i></a>
+                    </li>
+                    
+                </ul>
+                
+
+                @else
+
+
+
+
+
+               @endif
+
+
+
+
+
+                
+
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ms-auto">
                     <!-- Authentication Links -->
@@ -64,9 +97,9 @@
                     @endif
 
 
-                    @if (Route::has('enviar-solicitud'))
+                    @if (Route::has('enviar-solicitud2'))
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('enviar-solicitud') }}">{{ __('Enviar Solicitud') }}</a>
+                        <a class="nav-link" href="{{ route('enviar-solicitud2') }}">{{ __('Enviar Solicitud2') }}</a>
                     </li>
                     @endif
 
@@ -93,8 +126,11 @@
             </div>
         </div>
     </nav>
+   
+   
 
     @yield('content')
+
 
 
     <footer

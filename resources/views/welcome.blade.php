@@ -93,7 +93,12 @@
                 </button>
             </div>
             <div class="modal-body">
-                @include('form-company')
+              
+              {{-- DESHABILITAR--}}
+            {{--     @include('form-company')    --}}
+
+
+
             </div>
         </div>
     </div>

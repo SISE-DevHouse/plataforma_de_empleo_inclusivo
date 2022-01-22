@@ -1,4 +1,9 @@
  
+ @extends('layouts.app')
+
+ @section('content')
+
+
 <section>
 
     <div class="container-fluid h-custom py-4">
@@ -155,9 +160,12 @@
 
 
 
+
 <!--Footer-->
 
 
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
  
+
+@endsection
