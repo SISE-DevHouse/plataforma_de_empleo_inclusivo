@@ -21,6 +21,18 @@ class EditarperfilController extends Controller
     }
 
 
+    public function edit2($id)
+    {
+        $perfil= User::find($id);
+        
+        
+        return view('usuario.visualizar',compact('perfil'));
+
+    }
+
+
+
+
 
     public function update(Request $request, $id)
     {

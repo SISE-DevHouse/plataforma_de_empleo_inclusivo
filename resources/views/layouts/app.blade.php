@@ -49,10 +49,6 @@
 
                 @if(Auth::check()&&Auth::user()->role=="administrador" )
 
-
-    
-
-
                 <ul class="navbar-nav me-auto">
 
                     
@@ -62,10 +58,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('distritos.index') }}"><i class="fa fa-apple"> {{ __('Distritos') }}</i></a>
                     </li>
-                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('usuarios.index') }}"><i class="fa fa-apple"> {{ __('usuarios') }}</i></a>
+                    </li>
                 </ul>
                 
-
                 @else
 
 
@@ -128,8 +125,23 @@
     </nav>
    
    
+  
 
-    @yield('content')
+
+
+
+
+                
+
+@yield('content')
+
+
+
+
+
+
+ 
+
 
 
 
