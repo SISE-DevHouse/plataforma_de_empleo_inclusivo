@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Distrito;
 use App\Models\Empresa;
 use Illuminate\Http\Request;
 
@@ -19,8 +20,9 @@ class EmpresaController extends Controller
     public function index()
     {
         $empresas = Empresa::paginate();
+        $distritos =Distrito::pluck('nombre','id');
 
-        return view('empresa.index', compact('empresas'))
+        return view('empresa.index', compact('empresas','distritos'))
             ->with('i', (request()->input('page', 1) - 1) * $empresas->perPage());
     }
 
@@ -32,7 +34,8 @@ class EmpresaController extends Controller
     public function create()
     {
         $empresa = new Empresa();
-        return view('empresa.create', compact('empresa'));
+        $distritos =Distrito::pluck('nombre','id');
+        return view('empresa.create', compact('empresa','distritos'));
     }
 
     /**
@@ -73,8 +76,9 @@ class EmpresaController extends Controller
     public function edit($id)
     {
         $empresa = Empresa::find($id);
+        $distritos =Distrito::pluck('nombre','id');
 
-        return view('empresa.edit', compact('empresa'));
+        return view('empresa.edit', compact('empresa','distritos'));
     }
 
     /**

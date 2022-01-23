@@ -28,7 +28,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('id_distrito') }}
-            {{ Form::text('id_distrito', $empresa->id_distrito, ['class' => 'form-control' . ($errors->has('id_distrito') ? ' is-invalid' : ''), 'placeholder' => 'Id Distrito']) }}
+            {{ Form::select('id_distrito',$distritos, $empresa->id_distrito, ['class' => 'form-control' . ($errors->has('id_distrito') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione']) }}
             {!! $errors->first('id_distrito', '<div class="invalid-feedback">:message</p>') !!}
         </div>
 

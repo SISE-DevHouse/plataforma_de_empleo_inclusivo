@@ -4,6 +4,8 @@ use App\Models\registroempresas;
 use App\Http\Controllers\RegistroempresasController;
 use App\Http\Controllers\EditarperfilController;
 
+use App\Http\Controllers\UsersController;
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -41,8 +43,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::resource('distritos',\App\Http\Controllers\DistritoController::class)->middleware('auth');
 Route::resource('empresas',\App\Http\Controllers\EmpresaController::class)->middleware('auth');
-
-
+Route::resource('usuarios',\App\Http\Controllers\UserController::class)->middleware('auth');
 
 
 
@@ -54,6 +55,8 @@ Route::resource('empresas',\App\Http\Controllers\EmpresaController::class)->midd
 
 
 Route::GET('EditarPerfil/{id}', 'App\Http\Controllers\EditarperfilController@edit');
+
+Route::GET('vizualizar/{id}', 'App\Http\Controllers\EditarperfilController@edit2');
 
 Route::PATCH('EditarPerfil/{id}', 'App\Http\Controllers\EditarperfilController@update');
 
