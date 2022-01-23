@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\registroempresas;
+
 use App\Http\Controllers\RegistroempresasController;
 use App\Http\Controllers\EditarperfilController;
 use App\Http\Controllers\EmpresaController;
