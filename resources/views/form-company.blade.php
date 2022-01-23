@@ -38,7 +38,7 @@
                             <input id="nombreEmpresa" type="text"
                                 class="form-control form-control-lg @error('nombreEmpresa') is-invalid @enderror"
                                 name="nombreEmpresa" value="{{ old('nombreEmpresa') }}" required
-                                placeholder="{{ __('Ingresar el nombre de la emrpresa') }}" autofocus>
+                                placeholder="{{ __('Nombre de la empresa') }}" autofocus>
 
                             @error('nombreEmpresa')
                             <span class="focus-input100 invalid-feedback" role="alert">
@@ -60,18 +60,6 @@
                             @enderror
                         </div>
 
-
-                        <!-- Password input -->
-                        <div class="form-outline mb-3" validate-input m-b-16" data-validate="Requiere ingresar un ruc">
-                            <input id="ruc" class="form-control  form-control-lg @error('ruc') is-invalid @enderror"
-                                type="text" name="ruc" placeholder="{{ __('RUC') }} " required>
-
-                            @error('ruc')
-                            <span class="focus-input100 invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
-                        </div>
 
                         <div class="form-outline mb-3" validate-input m-b-16"
                             data-validate="Requiere ingresar un telefono">
@@ -133,6 +121,11 @@
                                 <strong>{{ $message }}</strong>
                             </span>
                             @enderror
+                        </div>
+
+                        <div class="form-outline mb-3" >
+                            <textarea  class="form-control  form-control-lg"  placeholder="Contraseña">
+                            </textarea>
                         </div>
 
 
