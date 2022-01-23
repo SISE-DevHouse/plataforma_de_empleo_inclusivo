@@ -10,3 +10,12 @@ php artisan serve
 // Migrar tablas  a la bd.
 php artisan migrate
 
+
+// Si hay error hay que hacer migrate
+composer update
+
+ php artisan key:generate
+
+php artisan migrate
+
+php artisan serve

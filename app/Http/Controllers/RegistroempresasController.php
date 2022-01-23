@@ -23,7 +23,7 @@ class RegistroempresasController extends Controller
     public function solicitud()
     {
        
-        return view('form-company');
+        return view('register-company');
 
         //
     }

@@ -94,8 +94,7 @@
             </div>
             <div class="modal-body">
               
-              {{-- DESHABILITAR--}}
-            {{--     @include('form-company')    --}}
+                @include('form-company')  
 
 
 

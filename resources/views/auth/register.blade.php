@@ -2,66 +2,97 @@
 
 @section('content')
 
-<section class="pabsolutetop py-4">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-3">
-                <div class="card text-center">
-                    <div class="card-header">{{ __('Register') }}</div>
 
-                    <div class="card-body">
-                        <form method="POST" action="{{ route('register') }}">
-                            @csrf
-                            <!-- -->
 
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus id="name">
-                                <label for="floatingInput">Username</label>
-                                @error('name')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" id="email">
-                                <label for="floatingEmail">Email address</label>
-                                @error('email')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" id="password">
-                                <label for="floatingPassword">Password</label>
-                                @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input type="password" class="form-control" id="password-confirm" name="password_confirmation" required autocomplete="new-password">
-                                <label for="floatingPassword">password-confirm</label>
-                            </div>
-                            <!-- -->
-                            <div class="row mb-0">
-                                <div class="col-md-15 offset-md-15">
-                                    <button type="submit" class="btn btn-primary">
-                                        {{ __('Register') }}
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
+
+<section>
+
+    <div class="container-fluid h-custom py-4">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+
+                <div class="row pt-4 ps-5">
+
+
+
+
+                    <div class="col-12 py-4 ps-5">
+
+                        <img src="img/imagen2.jpg" class="img-fluid rounded-pill" alt="">
+                        <p class="fs-1" style="color: rgb(206, 117, 29);">Registrate ahora y empieza a tener propuestas laborales.
                     </div>
                 </div>
+
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+
+                <form class="login100-form validate-form flex-sb flex-w" method="POST" action="{{ route('register') }}">
+                    @csrf
+                    <!-- -->
+                    <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                        <p class="lead fw-normal mb-0 me-3"></p>
+                    </div>
+
+                    <div class="divider d-flex align-items-center my-4">
+                    </div>
+
+
+                    <!-- Password input -->
+                    <div class="form-outline mb-3" validate-input m-b-16" data-validate="Requiere ingresar un nombre">
+                        <input id="name" class="form-control  form-control-lg @error('name') is-invalid @enderror" type="text" name="name" placeholder="{{ __('Nombre del postulante') }} " required>
+
+                        @error('name')
+                        <span class="focus-input100 invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+
+                    <div class="form-outline mb-4 validate-input m-b-16" data-validate="Requiere ingresar un email">
+                        <input id="email" type="text" class="form-control form-control-lg @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required placeholder="{{ __('Ingresar el email') }}" autofocus>
+
+                        @error('email')
+                        <span class="focus-input100 invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+
+                    <div class="form-outline mb-3" validate-input m-b-16" data-validate="Requiere ingresar una contraseña">
+                        <input id="password" class="form-control  form-control-lg @error('password') is-invalid @enderror" type="password" name="password" placeholder="{{ __('Contraseña del cliente') }} " required>
+
+                        @error('password')
+                        <span class="focus-input100 invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+
+
+                    <div class="form-outline mb-3" validate-input m-b-16" data-validate="Requiere ingresar una contraseña">
+                        <input id="password-confirm" class="form-control  form-control-lg @error('password-confirm') is-invalid @enderror" type="password" name="password-confirm" placeholder="{{ __('Contraseña del cliente') }} " required>
+
+
+                    </div>
+
+
+                    <!-- -->
+                    <div class="row mb-0">
+                        <div class="col-md-15 offset-md-15">
+                            <button type="submit" class="btn btn-primary">
+                                {{ __('Register') }}
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
+
+
 </section>
-<br><br><br>
+
 
 
 @endsection
