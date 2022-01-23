@@ -45,16 +45,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('/home/empresas', RegistroempresasController::class);
 
 
-<<<<<<< HEAD
 Route::resource('distritos',\App\Http\Controllers\DistritoController::class)->middleware('auth');
 Route::resource('empresas',\App\Http\Controllers\EmpresaController::class)->middleware('auth');
 Route::resource('usuarios',\App\Http\Controllers\UserController::class)->middleware('auth');
-=======
-Route::resource('distritos', \App\Http\Controllers\DistritoController::class)->middleware('auth');
-Route::resource('empresas', \App\Http\Controllers\EmpresaController::class)->middleware('auth');
-
-
->>>>>>> 2082bdb9bddd7622af460876f767cf885861f979
 
 
 
