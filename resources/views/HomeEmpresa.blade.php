@@ -3,6 +3,6 @@
 @section('content')
 
 
-@include('form-company')  
+vista de administrador
 
 @endsection

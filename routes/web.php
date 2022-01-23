@@ -3,6 +3,9 @@
 use App\Models\registroempresas;
 use App\Http\Controllers\RegistroempresasController;
 use App\Http\Controllers\EditarperfilController;
+use App\Http\Controllers\EmpresaController;
+
+use App\Http\Controllers\HomeController;
 
 use App\Http\Controllers\UsersController;
 
@@ -35,15 +38,23 @@ Auth::routes();
 
 
 /*para vincular esta ruta con el controlador y su metodo ofuncion, y el middleware para ver si es postulante*/
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth.administrador');
 
 /*para vincular todas las rutas y todos lo metodos del controlador, y el middleware para ver si es empresa*/
 
+Route::resource('/home/empresas', RegistroempresasController::class);
 
 
+<<<<<<< HEAD
 Route::resource('distritos',\App\Http\Controllers\DistritoController::class)->middleware('auth');
 Route::resource('empresas',\App\Http\Controllers\EmpresaController::class)->middleware('auth');
 Route::resource('usuarios',\App\Http\Controllers\UserController::class)->middleware('auth');
+=======
+Route::resource('distritos', \App\Http\Controllers\DistritoController::class)->middleware('auth');
+Route::resource('empresas', \App\Http\Controllers\EmpresaController::class)->middleware('auth');
+
+
+>>>>>>> 2082bdb9bddd7622af460876f767cf885861f979
 
 
 
@@ -59,6 +70,3 @@ Route::GET('EditarPerfil/{id}', 'App\Http\Controllers\EditarperfilController@edi
 Route::GET('vizualizar/{id}', 'App\Http\Controllers\EditarperfilController@edit2');
 
 Route::PATCH('EditarPerfil/{id}', 'App\Http\Controllers\EditarperfilController@update');
-
-
-

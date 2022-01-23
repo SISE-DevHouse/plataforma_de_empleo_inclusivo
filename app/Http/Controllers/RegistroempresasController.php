@@ -14,16 +14,17 @@ class RegistroempresasController extends Controller
      */
     public function index()
     {
-        $datos['registroempresasss'] = registroempresas::paginate(5);
+        /* $datos['registroempresasss'] = registroempresas::paginate(5);
         return view('registroempresa.index', $datos);
-
+        */
         //
+        return view('HomeEmpresa');
     }
 
     public function solicitud()
     {
-       
-        return view('form-company');
+
+        return view('register-company');
 
         //
     }
