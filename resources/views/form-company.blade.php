@@ -124,7 +124,7 @@
                         </div>
 
                         <div class="form-outline mb-3" >
-                            <textarea  class="form-control  form-control-lg"  placeholder="Contraseña">
+                            <textarea  class="form-control  form-control-lg"  placeholder="Descripcion..">
                             </textarea>
                         </div>
 
