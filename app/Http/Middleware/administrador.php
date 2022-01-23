@@ -17,14 +17,13 @@ class administrador
     public function handle(Request $request, Closure $next)
     {
         if (auth()->check()) {
-            /*este primer if es para continuar con las rutas de los que tienen el roll empresa*/
-            if (auth()->user()->role == 'admin') {
+            /* si es diferente */
+            if (auth()->user()->role <> 'administrador') {
                 return $next($request);
             } else {
-                /*este lo mandara a registrarse como empresa para poder acceder*/
-                return redirect()->to('/');
+                return redirect()->to('/empresas');
+                /* return $next($request); */
             }
-            /*aca se puede agregar uno que tenga los dos roles pero eso se revisa a detalle*/
         }
 
 

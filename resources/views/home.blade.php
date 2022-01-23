@@ -1,18 +1,28 @@
-@extends('layouts.app')
-
-@section('content')
-
-
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Free Dental Medical Hospital Website Template | Smarteyeapps.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" href="assets/images/fav.jpg">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/fontawsom-all.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'INICIO') }}</title>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    <!-- PARA ICONOS -->
+    <script src="https://kit.fontawesome.com/a481dc1a78.js" crossorigin="anonymous"></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
 <body>
@@ -50,18 +60,18 @@
                             @if (isset(Auth::user()->foto))
 
                             <img src="{{asset('storage').'/'.Auth::user()->foto}}">
-                      @else
-                      <img src="assets/images/usuario.png">
-        
+                            @else
+                            <img src="assets/images/usuario.png">
+
                             @endif
-                            
-                            
+
+
                             <h3>{{ Auth::user()->name }}</h3>
                             <span>USUARIO</span>
                         </div>
                         <div class="center">
-                        <a href="{{url('EditarPerfil', Auth::user()->id)}}" class="btn btn-warning">Editar Perfil</a>
-                    </div>
+                            <a href="{{url('EditarPerfil', Auth::user()->id)}}" class="btn btn-warning">Editar Perfil</a>
+                        </div>
                         <h4 class="ltitle">Información Personal</h4>
                         <div class="contact-box pb0">
                             <div class="icon">
@@ -99,7 +109,7 @@
                             </div>
                         </div>
 
-                       
+
                         <div class="contact-box">
                             <div class="icon">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -237,7 +247,7 @@
             </div>
         </div>
     </div>
-   
+
 </body>
 
 
@@ -245,6 +255,3 @@
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/script.js"></script>
-
-
-@endsection
