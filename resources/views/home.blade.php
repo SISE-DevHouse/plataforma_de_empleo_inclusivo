@@ -149,7 +149,7 @@
                                 metus sit amet rhoncus luctus.</p>
                             <div class="btn-ro row no-margin">
                                 <ul class="btn-link">
-                                  
+
                                     <li>
                                         <a href="#"><i class="fas fa-cloud-download-alt"></i>Descargar Curriculum</a>
                                     </li>
@@ -159,7 +159,7 @@
 
                         <h2 class="rit-titl"><i class="fas fa-briefcase"></i> Experiencia</h2>
                         <div class="work-exp">
-                            <textarea name="" id="" cols="68" rows="10" readonly style="border: none;">{{ Auth::user()->experiencia }}  </textarea>
+                            <textarea name="" id="" cols="68" rows="10" readonly style="border: none;">{{ Auth::user()->experiencia }} </textarea>
                         </div>
 
 
@@ -168,21 +168,23 @@
                         <div class="education">
                             <ul class="row no-margin">
                                 <li class="col-md-6"><span>Nivel</span> <br>
-                                    {{ Auth::user()->educacion }} </li>
-                                
-                                    <li class="col-md-6"><span>Especificación</span> <br>
-                                        {{ Auth::user()->espeedu }} </li>
-                               
+                                    {{ Auth::user()->educacion }}
+                                </li>
+
+                                <li class="col-md-6"><span>Especificación</span> <br>
+                                    {{ Auth::user()->espeedu }}
+                                </li>
+
                             </ul>
                         </div>
 
                         <h2 class="rit-titl"><i class="fas fa-users-cog"></i> Habilidades</h2>
                         <div class="profess-cover row no-margin">
-                          
 
-                         
-                       
-<textarea name="" id="" cols="68" rows="5" readonly style="border: none;">{{ Auth::user()->habilidades }}  </textarea>
+
+
+
+                            <textarea name="" id="" cols="68" rows="5" readonly style="border: none;">{{ Auth::user()->habilidades }} </textarea>
 
 
                         </div>
