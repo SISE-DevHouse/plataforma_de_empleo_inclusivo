@@ -1,15 +1,6 @@
-
 @extends('layouts.app')
 
-
-
 @section('content')
-
-
-
-
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 
 
@@ -160,9 +151,11 @@
                             <p> <textarea name="perfil" id="perfil" cols="68" rows="5" readonly style="border: none;">{{ Auth::user()->perfil }} </textarea></p>
                             <div class="btn-ro row no-margin">
                                 <ul class="btn-link">
-
                                     <li>
-                                        <a href="#"><i class="fas fa-cloud-download-alt"></i>Descargar Curriculum</a>
+                                        <a href=""><i class="fas fa-paper-plane"></i> Hire Me</a>
+                                    </li>
+                                    <li>
+                                        <a href=""><i class="fas fa-cloud-download-alt"></i> Download Resume</a>
                                     </li>
                                 </ul>
                             </div>
@@ -170,7 +163,15 @@
 
                         <h2 class="rit-titl"><i class="fas fa-briefcase"></i> Experiencia</h2>
                         <div class="work-exp">
-                            <textarea name="" id="" cols="68" rows="10" readonly style="border: none;">{{ Auth::user()->experiencia }} </textarea>
+                            <h6>Junior Software Developer <span>2008-2011</span></h6>
+                            <i>Microsoft / United States</i>
+                            <ul>
+                                <li><i class="far fa-hand-point-right"></i> Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. </li>
+                                <li><i class="far fa-hand-point-right"></i> Sorem dolor sit amet, consectetur. </li>
+                                <li><i class="far fa-hand-point-right"></i> Porem ipsum sit amet, consectetur adipiscing
+                                </li>
+                            </ul>
                         </div>
 
 
@@ -178,28 +179,60 @@
                         <h2 class="rit-titl"><i class="fas fa-graduation-cap"></i> Educación</h2>
                         <div class="education">
                             <ul class="row no-margin">
-                                <li class="col-md-6"><span>Nivel</span> <br>
-                                    {{ Auth::user()->educacion }}
-                                </li>
-
-                                <li class="col-md-6"><span>Especificación</span> <br>
-                                    {{ Auth::user()->espeedu }}
-                                </li>
-
+                                <li class="col-md-6"><span>2013-2015</span> <br>
+                                    Master Degree - Cambridg University</li>
+                                <li class="col-md-6"><span>2013-2015</span> <br>
+                                    Master Degree - Cambridg University</li>
+                                <li class="col-md-6"><span>2013-2015</span> <br>
+                                    Master Degree - Cambridg University</li>
+                                <li class="col-md-6"><span>2013-2015</span> <br>
+                                    Master Degree - Cambridg University</li>
                             </ul>
                         </div>
 
                         <h2 class="rit-titl"><i class="fas fa-users-cog"></i> Habilidades</h2>
                         <div class="profess-cover row no-margin">
+                            <div class="col-md-6">
+                                <div class=" prog-row row">
+                                    <div class="col-sm-6">
+                                        Photoshop
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row prog-row">
+                                    <div class="col-sm-6">
+                                        PHP
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="row prog-row">
+                                    <div class="col-sm-6">
+                                        Web Design
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row prog-row">
+                                    <div class="col-sm-6">
+                                        Web Development
+                                    </div>
+
+                                </div>
+                            </div>
 
 
 
 
-                            <textarea name="" id="" cols="68" rows="5" readonly style="border: none;">{{ Auth::user()->habilidades }} </textarea>
 
 
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -214,4 +247,8 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/script.js"></script>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1551e294b4d40900d64536db18dd931a60d91a51
 @endsection
