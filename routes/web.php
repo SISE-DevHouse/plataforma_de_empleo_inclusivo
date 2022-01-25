@@ -33,6 +33,7 @@ Route::get('/', function () {
 Route::get('enviar-solicitud2', [App\Http\Controllers\RegistroempresasController::class, 'solicitud'])->name('enviar-solicitud2');
 
 Route::get('/enviar-solicitud', [App\Http\Controllers\RegistroempresasController::class, 'index'])->name('enviar-solicitud');
+
 Auth::routes();
 
 

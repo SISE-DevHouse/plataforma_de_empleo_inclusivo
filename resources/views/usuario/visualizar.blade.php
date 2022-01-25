@@ -41,13 +41,6 @@
 </div>
 -->
 
-<form method="POST" action="{{Url('EditarPerfil',Auth::user()->id)}}"  role="form" enctype="multipart/form-data">
-    
-    {{ method_field('PATCH') }}
-    @csrf
-
-  
-
 
 
 
@@ -70,11 +63,7 @@
                             <span><input type="file" name="foto" id="foto" class="form-control"></span>
 
                         </div>
-                            <div class="center">
-
-                               
-                                <button type="submit" class="btn btn-primary">GUARDAR</button>
-                            </div>
+                          
                         <h4 class="ltitle">Información Personal</h4>
                         <div class="contact-box pb0">
                             <div class="icon">
@@ -110,7 +99,7 @@
 
                         <div class="contact-box pb0">
                             <div class="icon">
-                                <i class="fas fa-globe-americas"></i>
+                                <i class="fas fa-at"></i>
                             </div>
                             <div class="detail">
                                {{ isset($perfil->email)?$perfil->email:''}}
@@ -129,9 +118,27 @@
                         
                         </div>
 
+
                         <div class="contact-box">
                             <div class="icon">
-                                <i class="fas fa-map-marker-alt"></i>
+                               <i class="fas fa-user-shield"></i>
+                            </div>
+                            <div class="detail">
+                                
+                               {{ isset($perfil->name)?$perfil->name:''}}
+                               <br>
+                               {{ isset($perfil->apellidos)?$perfil->apellidos:''}}
+                            </div>
+
+                        
+                        </div>
+
+
+
+
+                        <div class="contact-box">
+                            <div class="icon">
+                                <i class="fas fa-id-card"></i>
                             </div>
                             <div class="detail">
                                 
@@ -143,16 +150,10 @@
 
                         <div class="contact-box">
                             <div class="icon">
-                                <i class="fas fa-map-marker-alt"></i>
+                                <i class="fas fa-wheelchair"></i>
                             </div>
                             <div class="detail">
-                                <select name="tipodiscapacidad" id="tipodiscapacidad" class="form-control" >
-                                    <option value="{{isset(Auth::user()->tipodiscapacidad)?Auth::user()->tipodiscapacidad:''}}">Seleccione: {{isset(Auth::user()->tipodiscapacidad)?Auth::user()->tipodiscapacidad:''}}</option>
-                                    <option value="Fisica">Fisica</option>
-                                    <option value="Mental">Mental</option>
-                                    <option value="Sensorial">Sensorial</option>
-                                    <option value="Intelectual">Intelectual</option>
-                                </select>
+                             {{isset(Auth::user()->tipodiscapacidad)?Auth::user()->tipodiscapacidad:''}}
                             </div>
                         </div>
 
@@ -167,25 +168,14 @@
 
 
                         </ul>
-                        <h4 class="ltitle">Referencess</h4>
-
-                        <div class="refer-cov">
-                            <b>Jonney Smith</b>
-                            <p>CEO Casinocarol</p>
-                            <span>p +00 890 1232 8767</span>
-                        </div>
-                        <div class="refer-cov">
-                            <b>Jonney Smith</b>
-                            <p>System Administrator</p>
-                            <span>p +00 890 1232 8767</span>
-                        </div>
-
+                       
                     </div>
                 </div>
+
                 <div class="col-md-8 rt-div">
                     <div class="rit-cover">
                         <div class="hotkey">
-                            <h1 class="">{{ isset(Auth::user()->name)?Auth::user()->name:'' }} <br> {{ isset(Auth::user()->apellidos)?Auth::user()->apellidos:'' }} </h1>
+                            <h1 class="">{{ isset($perfil->name)?$perfil->name:''}} <br> {{ isset($perfil->apellido)?$perfil->apellido:''}} </h1>
                             <small>INFORMACIÓN</small>
                         </div>
                         <h2 class="rit-titl"><i class="far fa-user"></i> Perfil</h2>
@@ -213,15 +203,11 @@
                         <h2 class="rit-titl"><i class="fas fa-graduation-cap"></i> Educación</h2>
                         <div class="education">
                             <ul class="row no-margin">
-                                <li class="col-md-6"><span>Educación</span> <br>
-                                    <select name="educacion" id="educacion" class="form-control">
-                                        <option value="{{ isset($perfil->educacion)?$perfil->educacion:''}}">Seleccione:{{ isset($perfil->educacion)?$perfil->educacion:''}}</option>
-                                        <option value="Primaria">Primaria</option>
-                                        <option value="Secundaria">Secundaria</option>
-                                        <option value="Tecnico">Tecnico</option>
-                                        <option value="Superior">Superior</option>
-                                    </select>
-                                </li>
+                                <li class="col-md-6"><span>Educación</span> 
+                                    <br>
+                                       {{ isset($perfil->educacion)?$perfil->educacion:''}}
+                                       
+                                </li> 
                                 <li class="col-md-6"><span>Expecifique</span> <br>
                                     <textarea name="espeedu" id="espeedu" cols="30" rows="2" readonly style="border: none;">{{ isset($perfil->espeedu)?$perfil->espeedu:''}}</textarea></li>
                                 
@@ -240,12 +226,12 @@
 
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
     </div>
 
-</form>
 
 </body>
 
