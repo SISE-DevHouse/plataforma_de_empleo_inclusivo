@@ -131,6 +131,11 @@
                             <b>Jonney Smith</b>
                             <p>System Administrator</p>
                             <span>p +00 890 1232 8767</span>
+
+                            
+
+
+
                         </div>
 
                     </div>
@@ -143,11 +148,7 @@
                         </div>
                         <h2 class="rit-titl"><i class="far fa-user"></i> Perfil</h2>
                         <div class="about">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis accumsan purus enim, a
-                                vestibulum est tristique sit amet. Suspendisse nibh nisl, imperdiet sit amet mi vitae,
-                                elementum elementum nibh. Vivamus vitae eros malesuada, convallis dolor malesuada,
-                                lobortis ex. Sed cursus augue risus, ac semper est consectetur vitae. Praesent consequat
-                                metus sit amet rhoncus luctus.</p>
+                            <p> <textarea name="perfil" id="perfil" cols="68" rows="5" readonly style="border: none;">{{ Auth::user()->perfil }} </textarea></p>
                             <div class="btn-ro row no-margin">
                                 <ul class="btn-link">
                                     <li>
@@ -246,5 +247,8 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/script.js"></script>
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 1551e294b4d40900d64536db18dd931a60d91a51
 @endsection

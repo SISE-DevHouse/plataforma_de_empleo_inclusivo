@@ -191,11 +191,9 @@
                         </div>
                         <h2 class="rit-titl"><i class="far fa-user"></i> Perfil</h2>
                         <div class="about">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis accumsan purus enim, a
-                                vestibulum est tristique sit amet. Suspendisse nibh nisl, imperdiet sit amet mi vitae,
-                                elementum elementum nibh. Vivamus vitae eros malesuada, convallis dolor malesuada,
-                                lobortis ex. Sed cursus augue risus, ac semper est consectetur vitae. Praesent consequat
-                                metus sit amet rhoncus luctus.</p>
+
+                            <textarea name="perfil" id="perfil" placeholder="ESCRIBIR PERFIL..." cols="68" rows="10" style="border: none;">{{ isset($perfil->perfil)?$perfil->perfil:''}}</textarea>
+                            
                             <div class="btn-ro row no-margin">
                                 <ul class="btn-link">
                                     <li>
@@ -209,7 +207,7 @@
                         <h2 class="rit-titl"><i class="fas fa-briefcase"></i> Experiencia</h2>
                         <div class="work-exp">
                            
-                           <textarea name="experiencia" id="experiencia" placeholder="ESCRIBIR EXPERIENCIA" cols="68" rows="10">{{ isset($perfil->experiencia)?$perfil->experiencia:''}}</textarea>
+                           <textarea name="experiencia" id="experiencia" placeholder="ESCRIBIR EXPERIENCIA..." cols="68" rows="10" style="border: none;">{{ isset($perfil->experiencia)?$perfil->experiencia:''}}</textarea>
                            
                         </div>
 
@@ -228,14 +226,14 @@
                                     </select>
                                 </li>
                                 <li class="col-md-6"><span>Expecifique</span> <br>
-                                    <textarea name="espeedu" id="espeedu" cols="30" rows="2">{{ isset($perfil->espeedu)?$perfil->espeedu:''}}</textarea></li>
+                                    <textarea name="espeedu" id="espeedu" cols="30" rows="2" style="border: none;" placeholder="ESPECIFIQUE...">{{ isset($perfil->espeedu)?$perfil->espeedu:''}}</textarea></li>
                                 
                             </ul>
                         </div>
 
                         <h2 class="rit-titl"><i class="fas fa-users-cog"></i> Habilidades</h2>
                         <div class="profess-cover row no-margin">
-                           <textarea name="habilidades" id="habilidades" cols="68" rows="5">{{ isset($perfil->habilidades)?$perfil->habilidades:''}}</textarea>
+                           <textarea name="habilidades" id="habilidades" cols="68" rows="5" style="border: none;" placeholder="ESCRIBIR HABILIDADES...">{{ isset($perfil->habilidades)?$perfil->habilidades:''}}</textarea>
                             </div>
 
 
