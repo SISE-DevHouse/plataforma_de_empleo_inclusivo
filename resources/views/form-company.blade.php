@@ -36,7 +36,7 @@
                     </div>
 
                     <!-- Password input -->
-                    <div class="form-outline mb-3" validate-input m-b-16" data-validate="Requiere ingresar una contraseña">
+                    <div class="form-outline mb-3 validate-input m-b-16" data-validate="Requiere ingresar una contraseña">
                         <input id="ruc" class="form-control  form-control-lg @error('ruc') is-invalid @enderror" type="text" name="ruc" placeholder="{{ __('RUC') }} " required>
 
                         @error('ruc')
@@ -47,7 +47,7 @@
                     </div>
 
 
-                    <div class="form-outline mb-3" validate-input m-b-16" data-validate="Requiere ingresar un telefono">
+                    <div class="form-outline mb-3 validate-input m-b-16" data-validate="Requiere ingresar un telefono">
                         <input id="telefono" class="form-control  form-control-lg @error('telefono') is-invalid @enderror" type="text" name="telefono" placeholder="{{ __('Telefono') }} " required>
 
                         @error('telefono')
@@ -58,7 +58,7 @@
                     </div>
 
 
-                    <div class="form-outline mb-3" validate-input m-b-16" data-validate="Requiere ingresar un correo">
+                    <div class="form-outline mb-3 validate-input m-b-16" data-validate="Requiere ingresar un correo">
                         <input id="correo" class="form-control  form-control-lg @error('correo') is-invalid @enderror" type="text" name="email" placeholder="{{ __('Correo') }} " value="{{ old('email') }}" required autocomplete="email">
 
                         @error('correo')
@@ -70,7 +70,7 @@
 
 
 
-                    <div class="form-outline mb-3" validate-input m-b-16" data-validate="Requiere ingresar un direccion">
+                    <div class="form-outline mb-3 validate-input m-b-16" data-validate="Requiere ingresar un direccion">
                         <input id="direccion" class="form-control  form-control-lg @error('direccion') is-invalid @enderror" type="text" name="direccion" placeholder="{{ __('Direccion') }} " required autocomplete="direccion">
 
                         @error('direccion')
