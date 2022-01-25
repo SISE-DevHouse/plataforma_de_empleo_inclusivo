@@ -14,8 +14,8 @@
             </div>
             <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
 
-                <form class="login100-form validate-form flex-sb flex-w" method="POST" action="{{ route('login') }}">
-
+                <form class="login100-form validate-form flex-sb flex-w" method="POST" action="{{ route('empresa') }}"  role="form" enctype="multipart/form-data">
+                     
                     @csrf
                     <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
                         <p class="lead fw-normal mb-0 me-3"></p>
@@ -26,9 +26,9 @@
 
                     <!-- Email input -->
                     <div class="form-outline mb-4 validate-input m-b-16" data-validate="Requiere ingresar el nombre de la empresa">
-                        <input id="nombreEmpresa" type="text" class="form-control form-control-lg @error('nombreEmpresa') is-invalid @enderror" name="nombreEmpresa" value="{{ old('nombreEmpresa') }}" required placeholder="{{ __('Nombre de la empresa') }}" autofocus>
+                        <input id="nombreempresa"  name="nombreempresa"  type="text" class="form-control form-control-lg @error('nombreempresa') is-invalid @enderror" value="{{ old('nombreempresa') }}" required placeholder="{{ __('Nombre de la empresa') }}" autofocus>
 
-                        @error('nombreEmpresa')
+                        @error('nombreempresa')
                         <span class="focus-input100 invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -59,7 +59,7 @@
 
 
                     <div class="form-outline mb-3 validate-input m-b-16" data-validate="Requiere ingresar un correo">
-                        <input id="correo" class="form-control  form-control-lg @error('correo') is-invalid @enderror" type="text" name="email" placeholder="{{ __('Correo') }} " value="{{ old('email') }}" required autocomplete="email">
+                        <input id="correo" class="form-control  form-control-lg @error('correo') is-invalid @enderror" type="text" name="correo" placeholder="{{ __('Correo') }} " value="{{ old('correo') }}" required autocomplete="correo">
 
                         @error('correo')
                         <span class="focus-input100 invalid-feedback" role="alert">
@@ -85,10 +85,10 @@
 
 
 
-                    <div class="form-outline mb-3" validate-input m-b-16" data-validate="Requiere ingresar un distrito">
-                        <input id="distrito" class="form-control  form-control-lg @error('distrito') is-invalid @enderror" type="text" name="distrito" placeholder="{{ __('Distrito') }} " required>
+                    <div class="form-outline mb-3 validate-input m-b-16" data-validate="Requiere ingresar un distrito">
+                        <input id="id_distrito" class="form-control  form-control-lg @error('id_distrito') is-invalid @enderror" type="text" name="id_distrito" placeholder="{{ __('Distrito') }} " required>
 
-                        @error('correo')
+                        @error('id_distrito')
                         <span class="focus-input100 invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>

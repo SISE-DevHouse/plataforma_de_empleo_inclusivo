@@ -50,6 +50,7 @@ Route::resource('distritos',\App\Http\Controllers\DistritoController::class)->mi
 Route::resource('empresas',\App\Http\Controllers\EmpresaController::class)->middleware('auth');
 Route::resource('usuarios',\App\Http\Controllers\UserController::class)->middleware('auth');
 
+Route::POST('empresa',[\App\Http\Controllers\RegistroempresasController::class, 'store'])->name('empresa');
 
 
 
