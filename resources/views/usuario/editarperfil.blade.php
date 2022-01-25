@@ -111,7 +111,7 @@
 
                         <div class="contact-box pb0">
                             <div class="icon">
-                                <i class="fas fa-globe-americas"></i>
+                                <i class="fas fa-at"></i>
                             </div>
                             <div class="detail">
                                 <input type="text" placeholder="Email" class="form-control" name="email" value="{{ isset($perfil->email)?$perfil->email:''}}">
@@ -130,9 +130,22 @@
                         
                         </div>
 
+                <div class="contact-box">
+                            <div class="icon">
+                               <i class="fas fa-user-shield"></i>
+                            </div>
+                            <div class="detail">
+                                
+                                <input type="text" placeholder="Nombre" class="form-control" name="name" value="{{ isset($perfil->name)?$perfil->name:''}}">
+                                <input type="text" placeholder="Apeliidos" class="form-control" name="apellidos" value="{{ isset($perfil->apellidos)?$perfil->apellidos:''}}">
+                            </div>
+
+                        
+                        </div>
+
                         <div class="contact-box">
                             <div class="icon">
-                                <i class="fas fa-map-marker-alt"></i>
+                                <i class="fas fa-id-card"></i>
                             </div>
                             <div class="detail">
                                 
@@ -144,7 +157,7 @@
 
                         <div class="contact-box">
                             <div class="icon">
-                                <i class="fas fa-map-marker-alt"></i>
+                                <i class="fas fa-wheelchair"></i>
                             </div>
                             <div class="detail">
                                 <select name="tipodiscapacidad" id="tipodiscapacidad" class="form-control" >
@@ -168,18 +181,7 @@
 
 
                         </ul>
-                        <h4 class="ltitle">Referencess</h4>
-
-                        <div class="refer-cov">
-                            <b>Jonney Smith</b>
-                            <p>CEO Casinocarol</p>
-                            <span>p +00 890 1232 8767</span>
-                        </div>
-                        <div class="refer-cov">
-                            <b>Jonney Smith</b>
-                            <p>System Administrator</p>
-                            <span>p +00 890 1232 8767</span>
-                        </div>
+                        
 
                     </div>
                 </div>

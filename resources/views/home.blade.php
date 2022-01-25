@@ -5,7 +5,7 @@
 
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8">º
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title> Free Dental Medical Hospital Website Template | Smarteyeapps.com</title>
 
@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/fontawsom-all.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+<!-- PARA ICONOS -->
+<script src="https://kit.fontawesome.com/a481dc1a78.js" crossorigin="anonymous"></script>
+    
+ 
 </head>
 
 <body>
@@ -74,7 +79,7 @@
                         </div>
                         <div class="contact-box pb0">
                             <div class="icon">
-                                <i class="fas fa-globe-americas"></i>
+                                <i class="fas fa-at"></i>
                             </div>
                             <div class="detail">
                                 {{ Auth::user()->email }}<br>
@@ -92,7 +97,21 @@
 
                         <div class="contact-box">
                             <div class="icon">
-                                <i class="fas fa-map-marker-alt"></i>
+                               <i class="fas fa-user-shield"></i>
+                            </div>
+                            <div class="detail">
+                                
+                               {{ isset(Auth::user()->name)?Auth::user()->name:''}}
+                               <br>
+                               {{ isset(Auth::user()->apellidos)?Auth::user()->apellidos:''}}
+                            </div>
+
+                        
+                        </div>
+
+                        <div class="contact-box">
+                            <div class="icon">
+                                <i class="fas fa-id-card"></i>
                             </div>
                             <div class="detail">
                                 {{ Auth::user()->dni }}
@@ -102,7 +121,7 @@
 
                         <div class="contact-box">
                             <div class="icon">
-                                <i class="fas fa-map-marker-alt"></i>
+                                <i class="fas fa-wheelchair"></i>
                             </div>
                             <div class="detail">
                                 Discapacidad: <br>
@@ -116,62 +135,39 @@
                         <ul class="row social-link no-margin">
 
                             <li><i class="fab fa-whatsapp"> {{Auth::user()->telefono}}</i></li>
-                            <li><i class="fab fa-google-plus-g"> {{ Auth::user()->email }}</i></li>
+                            <li><i class="fab fa-google-plus-g"></i> {{ Auth::user()->email }}</i></li>
 
 
                         </ul>
-                        <h4 class="ltitle">Referencess</h4>
-
-                        <div class="refer-cov">
-                            <b>Jonney Smith</b>
-                            <p>CEO Casinocarol</p>
-                            <span>p +00 890 1232 8767</span>
-                        </div>
-                        <div class="refer-cov">
-                            <b>Jonney Smith</b>
-                            <p>System Administrator</p>
-                            <span>p +00 890 1232 8767</span>
-
-                            
-
-
-
-                        </div>
+                       
 
                     </div>
                 </div>
+                
                 <div class="col-md-8 rt-div">
                     <div class="rit-cover">
                         <div class="hotkey">
-                            <h1 class="">{{ Auth::user()->name }} <br> {{ Auth::user()->apellidos }} </h1>
+                            <h1 class="">{{ Auth::user()->name}} <br> {{ Auth::user()->apellido}} </h1>
                             <small>INFORMACIÓN</small>
                         </div>
                         <h2 class="rit-titl"><i class="far fa-user"></i> Perfil</h2>
                         <div class="about">
-                            <p> <textarea name="perfil" id="perfil" cols="68" rows="5" readonly style="border: none;">{{ Auth::user()->perfil }} </textarea></p>
+                            <p><textarea name="perfil" id="perfil" cols="68" rows="5" readonly style="border: none;">{{ Auth::user()->perfil }} </textarea></p>
                             <div class="btn-ro row no-margin">
                                 <ul class="btn-link">
                                     <li>
-                                        <a href=""><i class="fas fa-paper-plane"></i> Hire Me</a>
+                                        <a href=""><i class="fas fa-paper-plane"></i><input type="file"> Subir Archivo</a>
                                     </li>
-                                    <li>
-                                        <a href=""><i class="fas fa-cloud-download-alt"></i> Download Resume</a>
-                                    </li>
+                                    
                                 </ul>
                             </div>
                         </div>
 
                         <h2 class="rit-titl"><i class="fas fa-briefcase"></i> Experiencia</h2>
                         <div class="work-exp">
-                            <h6>Junior Software Developer <span>2008-2011</span></h6>
-                            <i>Microsoft / United States</i>
-                            <ul>
-                                <li><i class="far fa-hand-point-right"></i> Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit. </li>
-                                <li><i class="far fa-hand-point-right"></i> Sorem dolor sit amet, consectetur. </li>
-                                <li><i class="far fa-hand-point-right"></i> Porem ipsum sit amet, consectetur adipiscing
-                                </li>
-                            </ul>
+                           
+                           <textarea name="experiencia" id="experiencia"  cols="68" rows="10" readonly style="border: none;">{{ Auth::user()->experiencia}}</textarea>
+                           
                         </div>
 
 
@@ -179,52 +175,20 @@
                         <h2 class="rit-titl"><i class="fas fa-graduation-cap"></i> Educación</h2>
                         <div class="education">
                             <ul class="row no-margin">
-                                <li class="col-md-6"><span>2013-2015</span> <br>
-                                    Master Degree - Cambridg University</li>
-                                <li class="col-md-6"><span>2013-2015</span> <br>
-                                    Master Degree - Cambridg University</li>
-                                <li class="col-md-6"><span>2013-2015</span> <br>
-                                    Master Degree - Cambridg University</li>
-                                <li class="col-md-6"><span>2013-2015</span> <br>
-                                    Master Degree - Cambridg University</li>
+                                <li class="col-md-6"><span>Educación</span> 
+                                    <br>
+                                       {{ Auth::user()->educacion}}
+                                       
+                                </li> 
+                                <li class="col-md-6"><span>Expecifique</span> <br>
+                                    <textarea name="espeedu" id="espeedu" cols="30" rows="2" readonly style="border: none;">{{ Auth::user()->espeedu}}</textarea></li>
+                                
                             </ul>
                         </div>
 
                         <h2 class="rit-titl"><i class="fas fa-users-cog"></i> Habilidades</h2>
                         <div class="profess-cover row no-margin">
-                            <div class="col-md-6">
-                                <div class=" prog-row row">
-                                    <div class="col-sm-6">
-                                        Photoshop
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="row prog-row">
-                                    <div class="col-sm-6">
-                                        PHP
-                                    </div>
-
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="row prog-row">
-                                    <div class="col-sm-6">
-                                        Web Design
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="row prog-row">
-                                    <div class="col-sm-6">
-                                        Web Development
-                                    </div>
-
-                                </div>
+                           <textarea name="habilidades" id="habilidades" cols="68" rows="5" readonly style="border: none;">{{ Auth::user()->habilidades}}</textarea>
                             </div>
 
 
@@ -234,7 +198,6 @@
 
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     </div>
@@ -247,8 +210,5 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/script.js"></script>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 1551e294b4d40900d64536db18dd931a60d91a51
 @endsection
