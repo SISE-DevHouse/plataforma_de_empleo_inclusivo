@@ -38,7 +38,7 @@
 
 
                     <!-- Password input -->
-                    <div class="form-outline mb-3" validate-input m-b-16" data-validate="Requiere ingresar un nombre">
+                    <div class="form-outline mb-3  validate-input m-b-16" data-validate="Requiere ingresar un nombre">
                         <input id="name" class="form-control  form-control-lg @error('name') is-invalid @enderror" type="text" name="name" placeholder="{{ __('Nombre del postulante') }} " required>
 
                         @error('name')
@@ -58,7 +58,7 @@
                         @enderror
                     </div>
 
-                    <div class="form-outline mb-3" validate-input m-b-16" data-validate="Requiere ingresar una contraseña">
+                    <div class="form-outline mb-3 validate-input m-b-16" data-validate="Requiere ingresar una contraseña">
                         <input id="password" class="form-control  form-control-lg @error('password') is-invalid @enderror" type="password" name="password" placeholder="{{ __('Contraseña del cliente') }} " required>
 
                         @error('password')
@@ -69,8 +69,8 @@
                     </div>
 
 
-                    <div class="form-outline mb-3" validate-input m-b-16" data-validate="Requiere ingresar una contraseña">
-                        <input id="password-confirm" class="form-control  form-control-lg @error('password-confirm') is-invalid @enderror" type="password" name="password-confirm" placeholder="{{ __('Contraseña del cliente') }} " required>
+                    <div class="form-outline mb-3 validate-input m-b-16" data-validate="Requiere ingresar una contraseña">
+                        <input id="password-confirm" class="form-control  form-control-lg @error('password-confirm') is-invalid @enderror" type="password" name="password_confirmation" placeholder="{{ __('Contraseña del cliente') }} " required>
 
 
                     </div>
