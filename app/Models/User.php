@@ -29,11 +29,18 @@ class User extends Authenticatable
         'direccion',
         'curriculum',
         'foto',
-        'provincia',
-        'distrito',
+        'experiencia',
+        'educacion',
+        'espeedu',
+        'habilidades',
+        'perfil',
 
     ];
 
+   
+
+
+  
     /**
      * The attributes that should be hidden for serialization.
      *

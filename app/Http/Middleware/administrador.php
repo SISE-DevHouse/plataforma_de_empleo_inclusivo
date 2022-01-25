@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class EmpresaAuth
+class administrador
 {
     /**
      * Handle an incoming request.
@@ -17,14 +17,17 @@ class EmpresaAuth
     public function handle(Request $request, Closure $next)
     {
         if (auth()->check()) {
-            /*este primer if es para continuar con las rutas de los que tienen el roll empresa*/
-            if (auth()->user()->role == 'empresa') {
+            /* si es diferente */
+            if (auth()->user()->role <> 'administrador') {
                 return $next($request);
             } else {
-                /*este lo mandara a registrarse como empresa para poder acceder*/
-                return redirect()->to('/register');
+                return redirect()->to('/empresas');
+                /* return $next($request); */
             }
-            /*aca se puede agregar uno que tenga los dos roles pero eso se revisa a detalle*/
         }
+
+
+
+        return $next($request);
     }
 }

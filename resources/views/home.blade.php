@@ -50,18 +50,18 @@
                             @if (isset(Auth::user()->foto))
 
                             <img src="{{asset('storage').'/'.Auth::user()->foto}}">
-                      @else
-                      <img src="assets/images/usuario.png">
-        
+                            @else
+                            <img src="assets/images/usuario.png">
+
                             @endif
-                            
-                            
+
+
                             <h3>{{ Auth::user()->name }}</h3>
                             <span>USUARIO</span>
                         </div>
                         <div class="center">
-                        <a href="{{url('EditarPerfil', Auth::user()->id)}}" class="btn btn-warning">Editar Perfil</a>
-                    </div>
+                            <a href="{{url('EditarPerfil', Auth::user()->id)}}" class="btn btn-warning">Editar Perfil</a>
+                        </div>
                         <h4 class="ltitle">Información Personal</h4>
                         <div class="contact-box pb0">
                             <div class="icon">
@@ -99,7 +99,7 @@
                             </div>
                         </div>
 
-                       
+
                         <div class="contact-box">
                             <div class="icon">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -131,6 +131,11 @@
                             <b>Jonney Smith</b>
                             <p>System Administrator</p>
                             <span>p +00 890 1232 8767</span>
+
+                            
+
+
+
                         </div>
 
                     </div>
@@ -143,11 +148,7 @@
                         </div>
                         <h2 class="rit-titl"><i class="far fa-user"></i> Perfil</h2>
                         <div class="about">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis accumsan purus enim, a
-                                vestibulum est tristique sit amet. Suspendisse nibh nisl, imperdiet sit amet mi vitae,
-                                elementum elementum nibh. Vivamus vitae eros malesuada, convallis dolor malesuada,
-                                lobortis ex. Sed cursus augue risus, ac semper est consectetur vitae. Praesent consequat
-                                metus sit amet rhoncus luctus.</p>
+                            <p> <textarea name="perfil" id="perfil" cols="68" rows="5" readonly style="border: none;">{{ Auth::user()->perfil }} </textarea></p>
                             <div class="btn-ro row no-margin">
                                 <ul class="btn-link">
                                     <li>
@@ -237,7 +238,7 @@
             </div>
         </div>
     </div>
-   
+
 </body>
 
 
@@ -246,5 +247,8 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/script.js"></script>
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 1551e294b4d40900d64536db18dd931a60d91a51
 @endsection

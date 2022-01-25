@@ -27,7 +27,12 @@ class CreateUsersTable extends Migration
             $table->string('direccion')->nullable();
             $table->string('curriculum')->nullable();
             $table->string('foto')->nullable();
+            $table->string('experiencia')->nullable();
+            $table->string('educacion')->nullable();
+            $table->string('espeedu')->nullable();
+            $table->string('habilidades')->nullable();
             $table->string('role')->nullable();
+            $table->string('perfil')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
