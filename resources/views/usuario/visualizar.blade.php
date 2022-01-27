@@ -60,8 +60,7 @@
 
                             <span>USUARIO</span>
 
-                            <span><input type="file" name="foto" id="foto" class="form-control"></span>
-
+                         
                         </div>
                           
                         <h4 class="ltitle">Información Personal</h4>
@@ -184,7 +183,7 @@
                             <div class="btn-ro row no-margin">
                                 <ul class="btn-link">
                                     <li>
-                                        <a href=""><i class="fas fa-paper-plane"></i><input type="file"> Subir Archivo</a>
+                                        <a href="#"><i class="fas fa-cloud-download-alt"></i>Descargar</a>
                                     </li>
                                     
                                 </ul>

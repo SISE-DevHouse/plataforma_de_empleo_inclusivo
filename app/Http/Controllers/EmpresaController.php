@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Distrito;
 use App\Models\Empresa;
 use Illuminate\Http\Request;
 
@@ -19,6 +20,8 @@ class EmpresaController extends Controller
     public function index()
     {
         $empresas = Empresa::paginate();
+
+    
 
         return view('empresa.index', compact('empresas'))
             ->with('i', (request()->input('page', 1) - 1) * $empresas->perPage());

@@ -96,7 +96,7 @@
 
                     @if (Route::has('enviar-solicitud2'))
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('enviar-solicitud2') }}">{{ __('Enviar Solicitud2') }}</a>
+                        <a class="nav-link" href="{{ route('enviar-solicitud2') }}">{{ __('Enviar Solicitud') }}</a>
                     </li>
                     @endif
 

@@ -32,7 +32,8 @@ class CreateUsersTable extends Migration
             $table->string('espeedu')->nullable();
             $table->string('habilidades')->nullable();
             $table->string('role')->nullable();
-            $table->string('perfil')->nullable();
+            $table->string('perfil')->nullable(); 
+            $table->string('archivo')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

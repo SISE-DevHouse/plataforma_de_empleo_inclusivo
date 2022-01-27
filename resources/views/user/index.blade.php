@@ -9,10 +9,32 @@
 
                     <div class="card-body">
                         <div class="table-responsive">
+
+
+
+
+<form action="{{route('usuarios.index')}}" method="GET">
+                                <div class="form-row">
+                                    <div class="col-sm-4">
+        <input type="text" class="form-control" id="texto" name="texto" value="{{isset($value)}}" placeholder="Ingrese nombre">
+                                    </div>
+                                    <div class="col-auto">
+                                        <input type="submit" value="BUSCAR" class="btn btn-primary">
+                                    </div>
+                                </div>
+
+                            </form>
+
+
+
+
+                            
+
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
 
-                                    <input type="text" class="form-control" placeholder="Buscar...">
+                                
+
                                     <tr>
                                         <th>No</th>
                                         
@@ -62,11 +84,16 @@
                                     @endforeach
                                 </tbody>
                             </table>
+                            {{ $users->links()}}
+            
                         </div>
                     </div>
                 </div>
-                {!! $users->links() !!}
+    
             </div>
         </div>
     </div>
+
+
+
 @endsection

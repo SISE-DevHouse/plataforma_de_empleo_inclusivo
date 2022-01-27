@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Empresa;
+use App\Models\Distrito;
 use App\Models\registroempresas;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class RegistroempresasController extends Controller
@@ -25,7 +27,10 @@ class RegistroempresasController extends Controller
     public function solicitud()
     {
 
-        return view('register-company');
+        $distrito = Distrito::paginate();
+     
+
+        return view('register-company',compact('distrito'));
 
         //
     }

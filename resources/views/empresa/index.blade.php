@@ -56,7 +56,7 @@
 											<td>{{ $empresa->telefono }}</td>
 											<td>{{ $empresa->correo }}</td>
 											<td>{{ $empresa->direccion }}</td>
-											<td>{{ $empresa->id_distrito }}</td>
+											<td>{{ $empresa->distrito->nombre }}</td>
 
                                             <td>
                                                 <form action="{{ route('empresas.destroy',$empresa->id) }}" method="POST">

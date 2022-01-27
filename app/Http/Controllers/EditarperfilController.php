@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Response;
 
 class EditarperfilController extends Controller
 {
@@ -45,7 +47,16 @@ class EditarperfilController extends Controller
                 Storage::delete('public/'.$usuarioperfil->foto);
                 $usuario['foto']=$request->file('foto')->store('uploads','public');
         }
-    
+
+
+        if($request->hasFile('archivo')){
+
+            $usuarioperfil=User::findOrFail($id);
+            Storage::delete('public/'.$usuarioperfil->archivo);
+            $usuario['archivo']=$request->file('archivo')->store('uploads','public');
+    }
+
+
         User::where('id','=',$id)->update($usuario);
       
 
@@ -53,6 +64,19 @@ class EditarperfilController extends Controller
         return redirect()->route('home');
 
     }
+
+
+    function downloadFile($fileName){
+
+        $contents = Storage::disk('local')->get($fileName);
+        $tempFile = "temp.doc";
+        file_put_contents($tempFile, $contents);
+   
+         header("Content-type: application/doc");
+         header("Content-Length: " . filesize($tempFile));
+         readfile($tempFile);
+
+  }
 
 
 

@@ -35,7 +35,7 @@ class User extends Authenticatable
         'role',
         'habilidades',
         'perfil',
-
+        'archivo',
     ];
 
    

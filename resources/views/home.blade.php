@@ -155,10 +155,13 @@
                             <p><textarea name="perfil" id="perfil" cols="68" rows="5" readonly style="border: none;">{{ Auth::user()->perfil }} </textarea></p>
                             <div class="btn-ro row no-margin">
                                 <ul class="btn-link">
+                
                                     <li>
-                                        <a href=""><i class="fas fa-paper-plane"></i><input type="file"> Subir Archivo</a>
+                                        <a href="{{url('downloadFile',Auth::user()->archivo)}}"><i class="fas fa-cloud-download-alt"></i>Descargar</a>
                                     </li>
-                                    
+
+
+
                                 </ul>
                             </div>
                         </div>

@@ -56,6 +56,12 @@ Route::POST('empresa',[\App\Http\Controllers\RegistroempresasController::class, 
 
 
 
+Route::get('perfil/archivo', [EditarperfilController::class, 'downloadFile']);
+
+
+
+
+
 
 
 

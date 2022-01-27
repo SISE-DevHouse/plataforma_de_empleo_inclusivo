@@ -1,3 +1,6 @@
+<!-- Styles -->
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 <section>
 
     <div class="container-fluid h-custom py-4">
@@ -84,16 +87,43 @@
 
 
 
+    
+
 
                     <div class="form-outline mb-3 validate-input m-b-16" data-validate="Requiere ingresar un distrito">
-                        <input id="id_distrito" class="form-control  form-control-lg @error('id_distrito') is-invalid @enderror" type="text" name="id_distrito" placeholder="{{ __('Distrito') }} " required>
+                        
+                        <div class="form-outline mb-3 validate-input m-b-16" data-validate="Requiere ingresar un distrito">
+                        
+@isset($distrito)
 
+
+
+                            <select name="id_distrito" id="" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                
+                                <option value="" hidden selected  aria-label=".form-select-lg example">Seleccione</option>
+                                
+                                @foreach($distrito as $dis )
+                                
+                                <option value="{{$dis->id}}"  aria-label=".form-select-lg example">{{$dis->nombre}}</option>
+                               
+                                @endforeach
+                            </select>
+
+
+@endisset
+                            
                         @error('id_distrito')
                         <span class="focus-input100 invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
                     </div>
+
+
+
+
+
+
 
                     <div class="form-outline mb-3">
                         <textarea class="form-control  form-control-lg" placeholder="Descripcion..">
@@ -108,6 +138,13 @@
                             {{ __('Enviar Solicitud') }}
                         </button>
                     </div>
+
+
+
+
+
+
+
 
                 </form>
             </div>
