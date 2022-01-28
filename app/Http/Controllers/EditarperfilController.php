@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Storage;
 class EditarperfilController extends Controller
 {
     //
-
+    
 
     public function edit($id)
     {
@@ -31,7 +31,12 @@ class EditarperfilController extends Controller
     }
 
 
-
+    public function mostrarcv($id)
+    {
+        $userr = User::where('id',$id)->firstOrFail();
+        $pfile = storage_path( path: "app/public/" . $userr->curriculum);
+        return response()->download(file:$pfile);
+    }
 
 
     public function update(Request $request, $id)
@@ -44,14 +49,19 @@ class EditarperfilController extends Controller
                 $usuarioperfil=User::findOrFail($id);
                 Storage::delete('public/'.$usuarioperfil->foto);
                 $usuario['foto']=$request->file('foto')->store('uploads','public');
-        }
-    
-        User::where('id','=',$id)->update($usuario);
-      
 
+                
+        };
+
+        if ($request->hasFile('curriculum')) {
+                $usuarioperfil=User::findOrFail($id);
+                Storage::delete('public/'.$usuarioperfil->curriculum);
+                $usuario['curriculum']=$request->file('curriculum')->store('uploads','public');
+                
+
+        }            User::where('id','=',$id)->update($usuario);
 
         return redirect()->route('home');
-
     }
 
 

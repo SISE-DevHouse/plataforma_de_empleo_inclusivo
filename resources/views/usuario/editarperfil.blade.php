@@ -61,20 +61,24 @@
                         <div class="profile-info">
 
                             @if(isset($perfil->foto))
-            <img src="{{asset('storage').'/'.$perfil->foto}}" alt="160" width="160">
-        @endisset
+                            <img src="{{asset('storage').'/'.$perfil->foto}}" alt="160" width="160">
+                            @endisset
                             <h3>{{ isset($perfil->name)?$perfil->name:''}}</h3>
 
                             <span>USUARIO</span>
 
-                            <span><input type="file" name="foto" id="foto" class="form-control"></span>
+                            <span><input type="file" name="foto"        id="foto"       class="form-control"></span>
 
+                            <!--falta subir CV creo revisar-->
+                            
                         </div>
-                            <div class="center">
 
-                               
-                                <button type="submit" class="btn btn-primary">GUARDAR</button>
-                            </div>
+                        <div class="center">
+
+                            
+                            <button type="submit" class="btn btn-primary">GUARDAR</button>
+                        </div>
+                        
                         <h4 class="ltitle">Información Personal</h4>
                         <div class="contact-box pb0">
                             <div class="icon">
@@ -197,7 +201,8 @@
                             <div class="btn-ro row no-margin">
                                 <ul class="btn-link">
                                     <li>
-                                        <a href=""><i class="fas fa-paper-plane"></i><input type="file"> Subir Archivo</a>
+
+                                        <a href=""><i class="fas fa-paper-plane"></i><input type="file" name="curriculum" id="curriculum"> Subir Archivo</a>
                                     </li>
                                     
                                 </ul>

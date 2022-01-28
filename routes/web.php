@@ -63,3 +63,6 @@ Route::GET('EditarPerfil/{id}', 'App\Http\Controllers\EditarperfilController@edi
 Route::GET('vizualizar/{id}', 'App\Http\Controllers\EditarperfilController@edit2');
 
 Route::PATCH('EditarPerfil/{id}', 'App\Http\Controllers\EditarperfilController@update');
+
+Route::GET('descargarcv/{id}', 'App\Http\Controllers\EditarperfilController@mostrarcv');
+
