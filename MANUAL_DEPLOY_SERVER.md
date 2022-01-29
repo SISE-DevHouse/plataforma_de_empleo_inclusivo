@@ -14,8 +14,10 @@ php artisan migrate
 // Si hay error hay que hacer migrate
 composer update
 
- php artisan key:generate
+php artisan key:generate
 
 php artisan migrate
 
 php artisan serve
+
+php artisan storage:link
