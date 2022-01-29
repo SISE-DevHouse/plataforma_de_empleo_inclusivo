@@ -58,6 +58,7 @@
                         @enderror
                     </div>
 
+                
                     <div class="form-outline mb-3 validate-input m-b-16" data-validate="Requiere ingresar una contraseña">
                         <input id="password" class="form-control  form-control-lg @error('password') is-invalid @enderror" type="password" name="password" placeholder="{{ __('Contraseña del cliente') }} " required>
 

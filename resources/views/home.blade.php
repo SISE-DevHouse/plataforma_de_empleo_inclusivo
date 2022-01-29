@@ -247,9 +247,3 @@
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/script.js"></script>
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 1551e294b4d40900d64536db18dd931a60d91a51
-@endsection
