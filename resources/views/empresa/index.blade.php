@@ -74,7 +74,7 @@
                         </div>
                     </div>
                 </div>
-                {!! $empresas->links() !!}
+                {{$empresas->links()}}
             </div>
         </div>
     </div>
