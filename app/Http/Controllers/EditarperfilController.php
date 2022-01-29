@@ -52,8 +52,8 @@ class EditarperfilController extends Controller
         if($request->hasFile('archivo')){
 
             $usuarioperfil=User::findOrFail($id);
-            Storage::delete('public/'.$usuarioperfil->archivo);
-            $usuario['archivo']=$request->file('archivo')->store('uploads','public');
+            Storage::delete('public/'.$usuarioperfil->curriculum);
+            $usuario['archivo']=$request->file('curriculum')->store('uploads','public');
     }
 
 
@@ -66,18 +66,8 @@ class EditarperfilController extends Controller
     }
 
 
-    function downloadFile($fileName){
-
-        $contents = Storage::disk('local')->get($fileName);
-        $tempFile = "temp.doc";
-        file_put_contents($tempFile, $contents);
-   
-         header("Content-type: application/doc");
-         header("Content-Length: " . filesize($tempFile));
-         readfile($tempFile);
-
-  }
-
+  
+  
 
 
 }

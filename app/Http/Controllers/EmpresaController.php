@@ -19,7 +19,7 @@ class EmpresaController extends Controller
      */
     public function index()
     {
-        $empresas = Empresa::paginate();
+        $empresas = Empresa::paginate(6);
 
     
 

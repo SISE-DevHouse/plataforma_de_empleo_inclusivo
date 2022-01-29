@@ -199,7 +199,7 @@
                             <div class="btn-ro row no-margin">
                                 <ul class="btn-link">
                                     <li>
-                                        <a href=""><i class="fas fa-paper-plane"></i><input type="file" name="archivo" id="archivo" class="form-control"> Subir Archivo</a>
+                                        <a href="#"><i class="fas fa-paper-plane"></i><input type="file" name="curriculum" id="curriculum" class="form-control"> Subir Archivo</a>
                                     </li>
                                     
                                 </ul>
