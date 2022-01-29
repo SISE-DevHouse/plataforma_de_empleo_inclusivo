@@ -59,7 +59,8 @@ class EditarperfilController extends Controller
                 $usuario['curriculum']=$request->file('curriculum')->store('uploads','public');
                 
 
-        }            User::where('id','=',$id)->update($usuario);
+        }
+        User::where('id','=',$id)->update($usuario);
 
         return redirect()->route('home');
     }
