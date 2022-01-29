@@ -23,6 +23,11 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    
+    <link rel="shortcut icon" href="assets/images/fav.jpg"> 
+    <link rel="stylesheet" href="assets/css/fontawsom-all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 </head>
 
 <body>
@@ -161,6 +166,7 @@
 
 
 
+ 
 </body>
 
 </html>
