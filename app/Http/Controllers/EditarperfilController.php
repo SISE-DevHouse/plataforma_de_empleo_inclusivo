@@ -47,7 +47,7 @@ class EditarperfilController extends Controller
                 $usuarioperfil=User::findOrFail($id);
                 Storage::delete('public/'.$usuarioperfil->foto);
                 $usuario['foto']=$request->file('foto')->store('uploads','public');
-        };
+        }
 
         if ($request->hasFile('curriculum')) {
                 $usuarioperfil=User::findOrFail($id);
