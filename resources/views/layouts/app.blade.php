@@ -23,6 +23,11 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    
+    <link rel="shortcut icon" href="assets/images/fav.jpg"> 
+    <link rel="stylesheet" href="assets/css/fontawsom-all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 </head>
 
 <body>
@@ -96,7 +101,7 @@
 
                     @if (Route::has('enviar-solicitud2'))
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('enviar-solicitud2') }}">{{ __('Enviar Solicitud') }}</a>
+                        <a class="nav-link" href="{{ route('enviar-solicitud2') }}">{{ __('Enviar Solicitud2') }}</a>
                     </li>
                     @endif
 
@@ -174,6 +179,7 @@
 
 
 
+ 
 </body>
 
 </html>

@@ -32,10 +32,10 @@ class User extends Authenticatable
         'experiencia',
         'educacion',
         'espeedu',
-        'role',
         'habilidades',
+        'role',
         'perfil',
-        'archivo',
+
     ];
 
    

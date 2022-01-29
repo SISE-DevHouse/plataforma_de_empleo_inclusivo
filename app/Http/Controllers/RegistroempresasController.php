@@ -2,10 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Empresa;
-use App\Models\Distrito;
 use App\Models\registroempresas;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class RegistroempresasController extends Controller
@@ -27,10 +24,7 @@ class RegistroempresasController extends Controller
     public function solicitud()
     {
 
-        $distrito = Distrito::paginate();
-     
-
-        return view('register-company',compact('distrito'));
+        return view('register-company');
 
         //
     }
@@ -56,11 +50,69 @@ class RegistroempresasController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    { 
-        request()->validate(Empresa::$rules);
+    {
+        //guardamos todo menos el token
+        $arrdatos = request()->except('_token');
+        registroempresas::insert($arrdatos);
 
-        $empresa = Empresa::create($request->all());
+        //return response()->json($arrdatos);
+        return redirect('home/registroempresa');
+    }
 
-        return view('welcome');
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\registroempresas  $registroempresas
+     * @return \Illuminate\Http\Response
+     */
+    public function show(registroempresas $registroempresas)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\registroempresas  $registroempresas
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //findOrFail es para buscar x el id
+        $datos = registroempresas::findOrFail($id);
+        //compact es para pasar los datos
+        return view('registroempresa.edit', compact('datos'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\registroempresas  $registroempresas
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //en esta ocasion se excluye tambien el metodo
+        $arrdatos = request()->except('_token', '_method');
+        //aca preguntamos si el id de lo que quiere eliminar es = $id, lo esta buscndo entre todos los existentes 
+        registroempresas::where('id', '=', $id)->update($arrdatos);
+        //findOrFail es para buscar x el id
+        $datos = registroempresas::findOrFail($id);
+        //compact es para pasar los datos
+        return view('registroempresa.edit', compact('datos'));
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\registroempresas  $registroempresas
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        registroempresas::destroy($id);
+        return redirect('registroempresa');
+        //
     }
 }

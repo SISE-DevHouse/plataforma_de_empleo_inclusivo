@@ -33,7 +33,6 @@ Route::get('/', function () {
 Route::get('enviar-solicitud2', [App\Http\Controllers\RegistroempresasController::class, 'solicitud'])->name('enviar-solicitud2');
 
 Route::get('/enviar-solicitud', [App\Http\Controllers\RegistroempresasController::class, 'index'])->name('enviar-solicitud');
-
 Auth::routes();
 
 
@@ -50,13 +49,6 @@ Route::resource('distritos',\App\Http\Controllers\DistritoController::class)->mi
 Route::resource('empresas',\App\Http\Controllers\EmpresaController::class)->middleware('auth');
 Route::resource('usuarios',\App\Http\Controllers\UserController::class)->middleware('auth');
 
-Route::POST('empresa',[\App\Http\Controllers\RegistroempresasController::class, 'store'])->name('empresa');
-
-
-
-
-
-Route::get('perfil/archivo', [EditarperfilController::class, 'downloadFile']);
 
 
 
@@ -71,3 +63,6 @@ Route::GET('EditarPerfil/{id}', 'App\Http\Controllers\EditarperfilController@edi
 Route::GET('vizualizar/{id}', 'App\Http\Controllers\EditarperfilController@edit2');
 
 Route::PATCH('EditarPerfil/{id}', 'App\Http\Controllers\EditarperfilController@update');
+
+Route::GET('descargarcv/{id}', 'App\Http\Controllers\EditarperfilController@mostrarcv');
+
