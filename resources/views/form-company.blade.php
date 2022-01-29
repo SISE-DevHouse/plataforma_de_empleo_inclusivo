@@ -126,8 +126,8 @@
 
 
                     <div class="form-outline mb-3">
-                        <textarea class="form-control  form-control-lg" placeholder="Descripcion..">
-                            </textarea>
+                       <textarea name="asunto" onkeyup="mayuscula(this);" placeholder="ASUNTO.." id="asunto" cols="48" rows="5"></textarea>
+                       
                     </div>
 
 
@@ -156,6 +156,9 @@
 </section>
 
 
+<script>function mayuscula(e) {
+    e.value = e.value.toUpperCase();
+}</script>
 
 
 <!--Footer-->

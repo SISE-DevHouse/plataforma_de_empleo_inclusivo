@@ -39,7 +39,7 @@
 
                     <!-- Password input -->
                     <div class="form-outline mb-3  validate-input m-b-16" data-validate="Requiere ingresar un nombre">
-                        <input id="name" class="form-control  form-control-lg @error('name') is-invalid @enderror" type="text" name="name" placeholder="{{ __('Nombre del postulante') }} " required>
+                        <input id="name" class="form-control  form-control-lg @error('name') is-invalid @enderror" type="text" name="name" placeholder="{{ __('Nombre del postulante') }} " required autofocus>
 
                         @error('name')
                         <span class="focus-input100 invalid-feedback" role="alert">
@@ -49,7 +49,7 @@
                     </div>
 
                     <div class="form-outline mb-4 validate-input m-b-16" data-validate="Requiere ingresar un email">
-                        <input id="email" type="text" class="form-control form-control-lg @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required placeholder="{{ __('Ingresar el email') }}" autofocus>
+                        <input id="email" type="text" class="form-control form-control-lg @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required placeholder="{{ __('Ingresar el email') }}" >
 
                         @error('email')
                         <span class="focus-input100 invalid-feedback" role="alert">
@@ -74,6 +74,11 @@
 
 
                     </div>
+
+
+                  
+                        <input id="role"  type="hidden" name="role" value="usuario"  required>
+
 
 
                     <!-- -->

@@ -30,6 +30,7 @@ class Empresa extends Model
 		'telefono' => 'required',
 		'correo' => 'required',
 		'direccion' => 'required',
+    'asunto' => 'required',
 		'id_distrito' => 'required',
     ];
 
@@ -40,7 +41,7 @@ class Empresa extends Model
      *
      * @var array
      */
-    protected $fillable = ['nombreempresa','ruc','telefono','correo','direccion','id_distrito'];
+    protected $fillable = ['nombreempresa','ruc','telefono','correo','direccion','asunto','id_distrito'];
 
 
     /**

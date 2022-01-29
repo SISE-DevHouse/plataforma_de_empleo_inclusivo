@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Distrito;
 use Illuminate\Http\Request;
 use App\Models\User;
 
@@ -16,9 +17,11 @@ class EditarperfilController extends Controller
     public function edit($id)
     {
         $perfil= User::find($id);
+
+        $distrito=Distrito::paginate();
         
         
-        return view('usuario.editarperfil',compact('perfil'));
+        return view('usuario.editarperfil',compact('perfil','distrito'));
 
     }
 
@@ -53,8 +56,9 @@ class EditarperfilController extends Controller
 
             $usuarioperfil=User::findOrFail($id);
             Storage::delete('public/'.$usuarioperfil->curriculum);
-            $usuario['archivo']=$request->file('curriculum')->store('uploads','public');
+            $usuario['archivo']=$request->file('archivo')->store('uploads','public');
     }
+
 
 
         User::where('id','=',$id)->update($usuario);

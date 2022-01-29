@@ -27,13 +27,18 @@
             {!! $errors->first('direccion', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('id_distrito') }}
-            {{ Form::text('id_distrito', $empresa->id_distrito, ['class' => 'form-control' . ($errors->has('id_distrito') ? ' is-invalid' : ''), 'placeholder' => 'Id Distrito']) }}
+            {{ Form::label('distrito') }}
+            {{ Form::Select('id_distrito',$distrito ,$empresa->id_distrito, ['class' => 'form-control' . ($errors->has('id_distrito') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione']) }}
             {!! $errors->first('id_distrito', '<div class="invalid-feedback">:message</p>') !!}
+        </div>
+        <div class="form-group">
+            {{ Form::label('asunto') }}
+            {{ Form::text('asunto', $empresa->asunto, ['class' => 'form-control' . ($errors->has('asunto') ? ' is-invalid' : ''), 'placeholder' => 'Asunto']) }}
+            {!! $errors->first('asunto', '<div class="invalid-feedback">:message</p>') !!}
         </div>
 
     </div>
     <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">{{$valor}}</button>
     </div>
 </div>

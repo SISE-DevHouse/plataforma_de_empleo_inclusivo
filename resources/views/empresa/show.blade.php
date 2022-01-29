@@ -41,8 +41,14 @@
                             {{ $empresa->direccion }}
                         </div>
                         <div class="form-group">
-                            <strong>Id Distrito:</strong>
-                            {{ $empresa->id_distrito }}
+                            <strong>Distrito:</strong>
+                            {{ $empresa->distrito->nombre }}
+                        </div>
+                        <div class="form-group">
+                           <h1><strong>ASUNTO</strong></h1> 
+                            <br>
+                            <textarea name="" id="" cols="60" rows="5" readonly style="background-color: #94d3ec;">{{ $empresa->asunto}}</textarea>
+                            
                         </div>
 
                     </div>

@@ -34,8 +34,9 @@ class EmpresaController extends Controller
      */
     public function create()
     {
+        $distrito=Distrito::pluck('nombre','id');
         $empresa = new Empresa();
-        return view('empresa.create', compact('empresa'));
+        return view('empresa.create', compact('empresa','distrito'));
     }
 
     /**
@@ -76,8 +77,9 @@ class EmpresaController extends Controller
     public function edit($id)
     {
         $empresa = Empresa::find($id);
+        $distrito=Distrito::pluck('nombre','id');
 
-        return view('empresa.edit', compact('empresa'));
+        return view('empresa.edit', compact('empresa','distrito'));
     }
 
     /**

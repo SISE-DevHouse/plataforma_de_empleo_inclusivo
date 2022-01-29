@@ -19,7 +19,7 @@
                         <form method="POST" action="{{ route('empresas.store') }}"  role="form" enctype="multipart/form-data">
                             @csrf
 
-                            @include('empresa.form')
+                            @include('empresa.form',['valor'=>'Editar'])
 
                         </form>
                     </div>

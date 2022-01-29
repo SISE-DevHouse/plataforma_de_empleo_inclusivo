@@ -21,6 +21,7 @@ class CreateEmpresasTable extends Migration
             $table->string('telefono');
             $table->string('correo');
             $table->string('direccion');
+            $table->string('asunto');
             $table->bigInteger('id_distrito')->unsigned();
             $table->timestamps();
 
