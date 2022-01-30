@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Distrito;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Storage;
@@ -15,11 +14,9 @@ class EditarperfilController extends Controller
     public function edit($id)
     {
         $perfil= User::find($id);
-
-        $distrito=Distrito::paginate();
         
         
-        return view('usuario.editarperfil',compact('perfil','distrito'));
+        return view('usuario.editarperfil',compact('perfil'));
 
     }
 
@@ -37,7 +34,7 @@ class EditarperfilController extends Controller
     public function mostrarcv($id)
     {
         $userr = User::where('id',$id)->firstOrFail();
-        $pfile = storage_path( path: "app/public/" . $userr->curriculum);
+        $pfile = storage_path( path: "app/public/". $userr->curriculum);
         return response()->download(file:$pfile);
     }
 

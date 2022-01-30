@@ -1,3 +1,12 @@
+----subida y bajada de archivos pdf v.2
+se adapto a los cambios actuales
+
+se comento el for de editarperfil x conflicto(no c cual es)
+
+se modifico el id y el nombre x curriculum del input de editar perfil para que funcione la subida de PDF de la funcion:update segundo if
+
+---
+
 ----subida y bajada de archivos pdf
 el nombre de el campo de curriculum de la BD es el mismo que el de el controlador y vistas blade donde se usa como identificador y nombre
 

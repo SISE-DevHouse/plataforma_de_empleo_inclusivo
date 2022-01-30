@@ -133,11 +133,12 @@
 
                                 <select name="direccion" id="direccion" class="form-control">
                                   <option value="{{isset($perfil->direccion)?$perfil->direccion:''}}" >Seleccione: {{isset($perfil->direccion)?$perfil->direccion:''}}</option>  
-                                
+                                <!-- 
                                   @foreach ($distrito as $dis)
 
                                     <option value="{{$dis->nombre}}" class="form-control" >{{$dis->nombre}}</option>
                                     @endforeach
+                                -->
                                 </select>
 
 
@@ -227,7 +228,7 @@
                             <div class="btn-ro row no-margin">
                                 <ul class="btn-link">
                                     <li>
-                                        <a href="#"><i class="fas fa-paper-plane"></i><input type="file" name="archivo" id="archivog" class="form-control"> Subir Archivo</a>
+                                        <a href=""><i class="fas fa-paper-plane"></i><input type="file" name="curriculum" id="curriculum" class="form-control"> Subir Archivo</a>
                                     </li>
                                     
                                 </ul>
