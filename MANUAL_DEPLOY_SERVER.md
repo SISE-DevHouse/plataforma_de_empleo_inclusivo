@@ -1,5 +1,5 @@
 // Instalar dependencias de composer.
-composer install
+composer installl
 
 // es necesario solicitar via correo el archivo .env
 
