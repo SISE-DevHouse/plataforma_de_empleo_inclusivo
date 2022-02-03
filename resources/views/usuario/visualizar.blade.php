@@ -183,7 +183,7 @@
                             <div class="btn-ro row no-margin">
                                 <ul class="btn-link">
                                     <li>
-                                        <a href="{{url('descargarcv', Auth::user()->id)}}"><i class="fas fa-cloud-download-alt"></i>Descargar</a> 
+                                        <a href="{{url('descargarcv', $perfil->id)}}"><i class="fas fa-cloud-download-alt"></i>Descargar</a> 
                                     </li>
                                     
                                 </ul>
