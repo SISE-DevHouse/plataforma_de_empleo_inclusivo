@@ -40,10 +40,11 @@
                                         
 										<th>Name</th>
 										<th>Email</th>
+                                        <th>Rol</th>
 										<th>Dni</th>
 										<th>Apellidos</th>
 										<th>Telefono</th>
-										<th>Telefono2</th>
+                                        
 										<th>Tipodiscapacidad</th>
 										<th>Direccion</th>
 									
@@ -64,10 +65,11 @@
                                             
 											<td>{{ $user->name }}</td>
 											<td>{{ $user->email }}</td>
+                                           <td>{{ $user->role }}</td>
 											<td>{{ $user->dni }}</td>
 											<td>{{ $user->apellidos }}</td>
 											<td>{{ $user->telefono }}</td>
-											<td>{{ $user->telefono2 }}</td>
+										
 											<td>{{ $user->tipodiscapacidad }}</td>
 											<td>{{ $user->direccion }}</td>
 										
@@ -79,8 +81,12 @@
 											
 
                                             <td><a href="{{url('vizualizar', $user->id)}}" class="btn btn-warning">Visualizar</a></td>
+
                                            
+                                        <td> <a class="btn btn-sm btn-success" href="{{ route('usuarios.edit',$user->id) }}"><i class="fa fa-fw fa-edit"></i>Editar</a></td>
                                         </tr>
+    
+
                                     @endforeach
                                 </tbody>
                             </table>

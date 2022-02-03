@@ -24,7 +24,7 @@ class UserController extends Controller
 
 
 
-        $users = DB::table('users')->select('id','name','apellidos','email','dni','telefono','telefono2','tipodiscapacidad','direccion','educacion','espeedu')
+        $users = DB::table('users')->select('id','name','apellidos','role','email','dni','telefono','tipodiscapacidad','direccion','educacion','espeedu')
         ->where('name','LIKE','%'.$texto.'%')
         ->orWhere('tipodiscapacidad','LIKE','%'.$texto.'%')
         ->orWhere('direccion','LIKE','%'.$texto.'%')
@@ -36,6 +36,32 @@ class UserController extends Controller
             ->with('i', (request()->input('page', 1) - 1) * $users->perPage());
     }
 
+
+    public function edit($id)
+    {
+        $user = User::find($id);
+
+        return view('user.edit', compact('user'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @param  User $user
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request,$id)
+    {
+        
+        $user = request()->except(['_token','_method']);
+       
+
+        User::where('id','=',$id)->update($user);
+
+        return redirect()->route('usuarios.index')
+            ->with('success', 'User updated successfully');
+    }
 
 
 
