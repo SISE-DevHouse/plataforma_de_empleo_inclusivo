@@ -66,7 +66,7 @@
                         </div>
                         <div class="center">
                             <a href="{{url('EditarPerfil', Auth::user()->id)}}" class="btn btn-warning">Editar Perfil</a>
-                            <a href="{{url('descargarcv', Auth::user()->id)}}" class="btn btn-warning">ver CV</a> 
+                           
                         </div>
                         <h4 class="ltitle">Información Personal</h4>
                         <div class="contact-box pb0">
@@ -158,7 +158,8 @@
                                 <ul class="btn-link">
                 
                                     <li>
-                                        <a href="{{url('downloadFile',Auth::user()->archivo)}}"><i class="fas fa-cloud-download-alt"></i>Descargar</a>
+                                        <a href="{{url('descargarcv', Auth::user()->id)}}"><i class="fas fa-cloud-download-alt"></i>Descargar</a>
+     
                                     </li>
 
 

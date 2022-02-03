@@ -78,7 +78,7 @@
 
 
                   
-                        <input id="role"  type="hidden" name="role" value="usuario"  required>
+                        <input id="role"  type="hidden" name="role" value="usuario" >
 
 
 
