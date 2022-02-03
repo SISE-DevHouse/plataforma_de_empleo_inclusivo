@@ -69,7 +69,7 @@
 
                             <span><input type="file" name="foto"        id="foto"       class="form-control"></span>
 
-                            <!--falta subir CV creo revisar-->
+                            <!-- -->
                             
                         </div>
 
@@ -133,12 +133,7 @@
 
                                 <select name="direccion" id="direccion" class="form-control">
                                   <option value="{{isset($perfil->direccion)?$perfil->direccion:''}}" >Seleccione: {{isset($perfil->direccion)?$perfil->direccion:''}}</option>  
-                                <!-- 
-                                  @foreach ($distrito as $dis)
 
-                                    <option value="{{$dis->nombre}}" class="form-control" >{{$dis->nombre}}</option>
-                                    @endforeach
-                                -->
                                 </select>
 
 
@@ -184,7 +179,7 @@
                                     <option value="Mental">Mental</option>
                                     <option value="Sensorial">Sensorial</option>
                                     <option value="Intelectual">Intelectual</option>
-                                </select>
+                                </select> 
                             </div>
                         </div>
 
