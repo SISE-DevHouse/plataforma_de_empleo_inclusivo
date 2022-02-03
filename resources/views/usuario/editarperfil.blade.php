@@ -62,6 +62,8 @@
 
                             @if(isset($perfil->foto))
                             <img src="{{asset('storage').'/'.$perfil->foto}}" alt="160" width="160">
+                            @else
+                            <img src="/assets/images/usuario.png">
                             @endisset
                             <h3>{{ isset($perfil->name)?$perfil->name:''}}</h3>
 
