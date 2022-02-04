@@ -56,7 +56,7 @@ Route::resource('usuarios',\App\Http\Controllers\UserController::class)->middlew
 
 
 
-
+Route::POST('empresa',[\App\Http\Controllers\RegistroempresasController::class, 'store'])->name('empresa');
 
 Route::GET('EditarPerfil/{id}', 'App\Http\Controllers\EditarperfilController@edit');
 
@@ -65,4 +65,6 @@ Route::GET('vizualizar/{id}', 'App\Http\Controllers\EditarperfilController@edit2
 Route::PATCH('EditarPerfil/{id}', 'App\Http\Controllers\EditarperfilController@update');
 
 Route::GET('descargarcv/{id}', 'App\Http\Controllers\EditarperfilController@mostrarcv');
+
+
 
