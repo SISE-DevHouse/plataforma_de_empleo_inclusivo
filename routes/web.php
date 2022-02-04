@@ -29,6 +29,8 @@ Route::get('/', function () {
 });
 
 
+
+
 /**/
 Route::get('enviar-solicitud2', [App\Http\Controllers\RegistroempresasController::class, 'solicitud'])->name('enviar-solicitud2');
 

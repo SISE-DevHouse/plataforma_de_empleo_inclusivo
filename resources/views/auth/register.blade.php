@@ -18,7 +18,7 @@
 
                     <div class="col-12 py-4 ps-5">
 
-                        <img src="img/imagen2.jpg" class="img-fluid rounded-pill" alt="">
+                        <img src="img/imagenregistrarse.jpg" class="img-fluid " alt="">
                         <p class="fs-1" style="color: rgb(206, 117, 29);">Registrate ahora y empieza a tener propuestas laborales.
                     </div>
                 </div>
