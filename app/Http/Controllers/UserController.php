@@ -28,6 +28,8 @@ class UserController extends Controller
         ->where('name','LIKE','%'.$texto.'%')
         ->orWhere('tipodiscapacidad','LIKE','%'.$texto.'%')
         ->orWhere('direccion','LIKE','%'.$texto.'%')
+        ->orWhere('apellidos','LIKE','%'.$texto.'%')
+        ->orWhere('role','LIKE','%'.$texto.'%')
         ->orderBy('apellidos','asc')
         ->paginate(3);
 
