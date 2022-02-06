@@ -33,6 +33,7 @@ class CreateUsersTable extends Migration
             $table->string('habilidades')->nullable();
             $table->string('role')->nullable();
             $table->string('perfil')->nullable(); 
+            $table->string('conadis')->nullable(); 
             $table->rememberToken();
             $table->timestamps();
         });

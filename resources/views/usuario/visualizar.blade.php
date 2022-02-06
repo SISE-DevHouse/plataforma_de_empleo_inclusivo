@@ -72,28 +72,15 @@
                                 
                            
                             <div class="detail">
+                                <label for="">Telefono</label>
 
                                 {{ isset($perfil->telefono)?$perfil->telefono:''}}
-                                
-                                
-                            </div>
-                        </div>
-
-                        <div class="contact-box pb0">
-                            <div class="icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                        
-                                
-                           
-                            <div class="detail">
-
                                 {{ isset($perfil->telefono2)?$perfil->telefono2:''}}
                                 
                             </div>
                         </div>
 
-
+                      
 
 
                         <div class="contact-box pb0">
@@ -101,6 +88,7 @@
                                 <i class="fas fa-at"></i>
                             </div>
                             <div class="detail">
+                                <label for="">Correo</label>
                                {{ isset($perfil->email)?$perfil->email:''}}
 
                             </div>
@@ -110,7 +98,7 @@
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div class="detail">
-                                
+                                <label for="">Dirección</label>
                                 {{ isset($perfil->direccion)?$perfil->direccion:''}}
                             </div>
 
@@ -123,7 +111,7 @@
                                <i class="fas fa-user-shield"></i>
                             </div>
                             <div class="detail">
-                                
+                                <label for="">Nombre y Apellidos</label>
                                {{ isset($perfil->name)?$perfil->name:''}}
                                <br>
                                {{ isset($perfil->apellidos)?$perfil->apellidos:''}}
@@ -140,18 +128,30 @@
                                 <i class="fas fa-id-card"></i>
                             </div>
                             <div class="detail">
-                                
+                                <label for="">DNI</label>
                             {{ isset($perfil->dni)?$perfil->dni:''}}
-                            </div>
-
-                        
                         </div>
+
+                        <div class="contact-box">
+                            <div class="icon">
+                                <i class="fas fa-id-card"></i>
+                            </div>
+                            <div class="detail">
+                                <label for="">Carnet de Conadis</label>
+                            {{ isset($perfil->conadis)?$perfil->conadis:''}}
+                        </div>
+
+
+
+
+
 
                         <div class="contact-box">
                             <div class="icon">
                                 <i class="fas fa-wheelchair"></i>
                             </div>
                             <div class="detail">
+                                <label for="">Tipo de Discapacidad</label>
                              {{isset(Auth::user()->tipodiscapacidad)?Auth::user()->tipodiscapacidad:''}}
                             </div>
                         </div>

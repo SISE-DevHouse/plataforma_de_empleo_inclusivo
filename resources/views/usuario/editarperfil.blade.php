@@ -91,26 +91,15 @@
                            
                             <div class="detail">
 
-                                <input type="text" placeholder="Telefono" required class="form-control" name="telefono" id="telefono" value="{{ isset($perfil->telefono)?$perfil->telefono:''}}">
+                                <label for="">Telefono</label>
+
+                                <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="9" placeholder="Telefono" required class="form-control" name="telefono" id="telefono" value="{{ isset($perfil->telefono)?$perfil->telefono:''}}">
+                                <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="9" placeholder="Telefono Opcional" required class="form-control" name="telefono2"  value="{{ isset($perfil->telefono2)?$perfil->telefono2:''}}">
                                 
                                 
                             </div>
                         </div>
 
-                        <div class="contact-box pb0">
-                            <div class="icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                        
-                                
-                           
-                            <div class="detail">
-
-                                
-                                <input type="text" placeholder="Telefono Opcional" required class="form-control" name="telefono2"  value="{{ isset($perfil->telefono2)?$perfil->telefono2:''}}">
-                                
-                            </div>
-                        </div>
 
 
 
@@ -120,6 +109,7 @@
                                 <i class="fas fa-at"></i>
                             </div>
                             <div class="detail">
+                                <label for="">Correo</label>
                                 <input type="text" placeholder="Email" class="form-control" required name="email" value="{{ isset($perfil->email)?$perfil->email:''}}">
 
                             </div>
@@ -129,7 +119,7 @@
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div class="detail">
-                                
+                                <label for="">Dirección</label>
                                 <input type="text" placeholder="Direccion" class="form-control" required name="direccion" value="{{ isset($perfil->direccion)?$perfil->direccion:''}}">
                             </div>
 
@@ -141,7 +131,7 @@
                                <i class="fas fa-user-shield"></i>
                             </div>
                             <div class="detail">
-                                
+                                <label for="">Nombre y Apellidos</label>
                                 <input type="text" placeholder="Nombre" class="form-control" required name="name" value="{{ isset($perfil->name)?$perfil->name:''}}">
                                 <input type="text" placeholder="Apeliidos" class="form-control" required name="apellidos" value="{{ isset($perfil->apellidos)?$perfil->apellidos:''}}">
                             </div>
@@ -154,18 +144,31 @@
                                 <i class="fas fa-id-card"></i>
                             </div>
                             <div class="detail">
-                                
-                                <input type="text" placeholder="DNI" class="form-control" required name="dni" value="{{ isset($perfil->dni)?$perfil->dni:''}}">
+                                <label for="">DNI</label>
+                                <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="8" placeholder="DNI" class="form-control" required name="dni"  value="{{ isset($perfil->dni)?$perfil->dni:''}}">
                             </div>
-
-                        
                         </div>
+
+                        <div class="contact-box">
+                            <div class="icon">
+                                <i class="fas fa-id-card"></i>
+                            </div>
+                            <div class="detail">
+                                <label for="">Carnet Conadis</label>
+                                <input type="text"  maxlength="11" placeholder="CARNET CONADIS" class="form-control" required name="conadis"  value="{{ isset($perfil->conadis)?$perfil->conadis:''}}">
+                            </div>
+                        </div>
+
+
 
                         <div class="contact-box">
                             <div class="icon">
                                 <i class="fas fa-wheelchair"></i>
                             </div>
                             <div class="detail">
+
+                                <label for="">Tipo de Discapacidad</label>
+
                                 <select name="tipodiscapacidad" id="tipodiscapacidad" class="form-control" required >
                                     <option value="{{isset(Auth::user()->tipodiscapacidad)?Auth::user()->tipodiscapacidad:''}}">Seleccione: {{isset(Auth::user()->tipodiscapacidad)?Auth::user()->tipodiscapacidad:''}}</option>
                                     <option value="Fisica">Fisica</option>
@@ -259,6 +262,19 @@
 </form>
 
 </body>
+
+<script>
+    function validaNumericos(event) {
+    if(event.charCode >= 48 && event.charCode <= 57){
+      return true;
+     }
+     return false;        
+}
+</script>
+
+
+
+
 
 
 <script src="/assets/js/jquery-3.2.1.min.js"></script>
