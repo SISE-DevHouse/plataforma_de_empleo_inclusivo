@@ -155,7 +155,7 @@
                             </div>
                             <div class="detail">
                                 <label for="">Carnet Conadis</label>
-                                <input type="text"  maxlength="11" placeholder="CARNET CONADIS" class="form-control" required name="conadis"  value="{{ isset($perfil->conadis)?$perfil->conadis:''}}">
+                                <input type="text"  maxlength="10" placeholder="CARNET CONADIS" class="form-control" required name="conadis"  value="{{ isset($perfil->conadis)?$perfil->conadis:''}}">
                             </div>
                         </div>
 
