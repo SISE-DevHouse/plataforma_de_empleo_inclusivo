@@ -76,9 +76,9 @@
                             <div class="detail">
                                 <label for="">TELEFONO</label>
                                 <br>
-                                {{ Auth::user()->telefono }} 
+                                1) {{ Auth::user()->telefono }} 
                                 <br>
-                                {{ Auth::user()->telefono2 }}
+                                2) {{ Auth::user()->telefono2 }}
                             </div>
                         </div>
                         <div class="contact-box pb0">
@@ -151,6 +151,9 @@
                                 Tipo de Discapacidades
                                 <br>
                                 {{Auth::user()->tipodiscapacidad}}
+
+                               
+                                <textarea   readonly style="background-color: #aad8ee;"  id="" cols="23" rows="5" class="form-control" style="border: none;">Descripcion:  {{Auth::user()->desdiscapacidad}}</textarea>
                             </div>
                         </div>
 

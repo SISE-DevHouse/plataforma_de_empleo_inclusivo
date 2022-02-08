@@ -38,7 +38,7 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Name</th>
+										<th>Nombre y Apellidos </th>
 										<th>Email</th>
                                         <th>Rol</th>
 										<th>Dni</th>
@@ -51,8 +51,9 @@
 										
 								
 										<th>Educacion</th>
-										<th>Espeedu</th>
-								
+										<th>Carrera</th>
+                                        <th>Fecha de creación </th>
+								        <th>Fecha de Modificación</th>
 									
 
                                         <th>Visualiza Curriculum</th>
@@ -63,7 +64,7 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $user->name }}</td>
+											<td>{{ $user->name }}  {{ $user->apellidos }}</td>
 											<td>{{ $user->email }}</td>
                                            <td>{{ $user->role }}</td>
 											<td>{{ $user->dni }}</td>
@@ -77,7 +78,8 @@
 											
 											<td>{{ $user->educacion }}</td>
 											<td>{{ $user->espeedu }}</td>
-											
+                                            <td>{{ $user->created_at }}</td>
+											<td>{{ $user->updated_at }}</td>
 											
 
                                             <td><a href="{{url('vizualizar', $user->id)}}" class="btn btn-warning">Visualizar</a></td>

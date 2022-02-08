@@ -68,8 +68,7 @@
             <p class="fs-1" style="color: rgb(206, 117, 29);">Conviertete hoy en una empresa inclusiva. <br> Envia tu
                 solicitud.</p>
         </div>
-        <div class="col text-center py-5 "><button type="button" class="btn btn-outline-secondary btn-lg" data-toggle="modal" data-target="#exampleModal">Enviar
-                Solicitud</button></div>
+        <div class="col text-center py-5 "><a class="btn btn-outline-secondary btn-lg" href="{{Route('enviar-solicitud2')}}">Enviar solicitud</a></div>
 
     </div>
 
@@ -81,27 +80,6 @@
 
 
 
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-              
-                @include('form-company')  
-
-
-
-            </div>
-        </div>
-    </div>
-</div>
 
 
 <!--Footer-->

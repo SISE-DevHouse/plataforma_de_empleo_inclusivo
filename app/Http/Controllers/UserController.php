@@ -24,14 +24,14 @@ class UserController extends Controller
 
 
 
-        $users = DB::table('users')->select('id','name','apellidos','role','email','dni','telefono','tipodiscapacidad','direccion','educacion','espeedu')
+        $users = DB::table('users')->select('id','name','apellidos','role','email','dni','telefono','tipodiscapacidad','direccion','educacion','espeedu','created_at','updated_at')
         ->where('name','LIKE','%'.$texto.'%')
         ->orWhere('tipodiscapacidad','LIKE','%'.$texto.'%')
         ->orWhere('direccion','LIKE','%'.$texto.'%')
         ->orWhere('apellidos','LIKE','%'.$texto.'%')
         ->orWhere('role','LIKE','%'.$texto.'%')
         ->orderBy('apellidos','asc')
-        ->paginate(3);
+        ->paginate(6);
 
         
         return view('user.index', compact('users'))

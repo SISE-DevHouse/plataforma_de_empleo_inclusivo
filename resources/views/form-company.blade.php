@@ -142,7 +142,7 @@
 
 
                     <div class="form-outline mb-3">
-                       <textarea name="asunto" onkeyup="mayuscula(this);" placeholder="ASUNTO.." id="asunto" cols="48" rows="5"></textarea>
+                       <textarea class="form-control" name="asunto" onkeyup="mayuscula(this);" placeholder="ASUNTO.." id="asunto" cols="42" rows="5"></textarea>
                        
                     </div>
 

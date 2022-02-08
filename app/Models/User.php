@@ -36,6 +36,8 @@ class User extends Authenticatable
         'role',
         'perfil',
         'conadis',
+        'desdiscapacidad',
+        
 
     ];
 
