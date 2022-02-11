@@ -31,6 +31,8 @@ class EditarperfilController extends Controller
     }
 
 
+
+
     public function mostrarcv($id)
     {
         $userr = User::where('id',$id)->firstOrFail();
@@ -38,6 +40,8 @@ class EditarperfilController extends Controller
         return response()->download(file:$pfile);
     }
 
+
+    
 
     public function update(Request $request, $id)
     {

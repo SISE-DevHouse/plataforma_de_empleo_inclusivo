@@ -110,10 +110,10 @@
 
 
 
-                    <div class="form-outline mb-3">
-                       <textarea name="asunto" onkeyup="mayuscula(this);" placeholder="ASUNTO.." id="asunto" cols="48" rows="5"></textarea>
-                       
-                    </div>
+                        <div class="form-outline mb-3">
+                        <textarea name="asunto" onkeyup="mayuscula(this);" placeholder="ASUNTO.." id="asunto" cols="48" rows="5"></textarea>
+                        
+                        </div>
 
 
                         <div class="text-center text-lg-start mt-4 pt-2">

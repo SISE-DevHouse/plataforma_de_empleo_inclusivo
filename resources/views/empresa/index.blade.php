@@ -18,7 +18,7 @@
 
                              <div class="float-right">
                                 <a href="{{ route('empresas.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  <i class="fas fa-newspaper">{{ __('Nueva Empresa') }}</i>
+                                  {{ __('Create New') }}
                                 </a>
                               </div>
                         </div>
@@ -41,7 +41,7 @@
 										<th>Telefono</th>
 										<th>Correo</th>
 										<th>Direccion</th>
-										<th>Id Distrito</th>
+										<th>Distrito</th>
 
                                         <th></th>
                                     </tr>
@@ -56,7 +56,7 @@
 											<td>{{ $empresa->telefono }}</td>
 											<td>{{ $empresa->correo }}</td>
 											<td>{{ $empresa->direccion }}</td>
-											<td>{{ $empresa->id_distrito }}</td>
+											<td>{{ $empresa->distrito->nombre }}</td>
 
                                             <td>
                                                 <form action="{{ route('empresas.destroy',$empresa->id) }}" method="POST">

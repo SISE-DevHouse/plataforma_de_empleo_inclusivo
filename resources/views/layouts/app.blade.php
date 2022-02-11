@@ -101,7 +101,7 @@
 
                     @if (Route::has('enviar-solicitud2'))
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('enviar-solicitud2') }}">{{ __('Enviar Solicitud2') }}</a>
+                        <a class="nav-link" href="{{ route('enviar-solicitud2') }}">{{ __('Enviar Solicitud') }}</a>
                     </li>
                     @endif
 
@@ -116,8 +116,7 @@
                          
                             @if(Auth::check()&&Auth::user()->role=="usuario" )
                          <a class="dropdown-item" href="{{ Url('EditarPerfil',Auth::user()->id) }}">
-                                {{ __('Editar Perfil') }}
-                            </a> 
+                            <i class="fas fa-user-edit">  {{ __('Editar Perfil') }}</i></a> 
 
     
                             @else
@@ -127,7 +126,7 @@
 
                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                {{ __('Cerrar Sesión') }}
+                                <i class="fas fa-sign-out-alt">  {{ __('Cerrar Sesión') }}</i>
                             </a>
                             
 
