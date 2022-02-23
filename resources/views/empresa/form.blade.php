@@ -2,39 +2,64 @@
     <div class="box-body">
         
         <div class="form-group">
-            {{ Form::label('nombreempresa') }}
-            {{ Form::text('nombreempresa', $empresa->nombreempresa, ['class' => 'form-control' . ($errors->has('nombreempresa') ? ' is-invalid' : ''), 'placeholder' => 'Nombreempresa']) }}
-            {!! $errors->first('nombreempresa', '<div class="invalid-feedback">:message</p>') !!}
+            
+            <label for="">Nombre Empresa</label>
+            <Input class="form-control" value="{{isset($empresa->nombreempresa)?$empresa->nombreempresa:''}}" name="nombreempresa" placeholder="Nombre Empresa"></Input>
+
         </div>
         <div class="form-group">
-            {{ Form::label('ruc') }}
-            {{ Form::text('ruc', $empresa->ruc, ['class' => 'form-control' . ($errors->has('ruc') ? ' is-invalid' : ''), 'placeholder' => 'Ruc']) }}
-            {!! $errors->first('ruc', '<div class="invalid-feedback">:message</p>') !!}
+
+            <label for="">Ruc</label>
+            <Input class="form-control" value="{{isset($empresa->ruc)?$empresa->ruc:''}}" name="ruc" placeholder="Ruc"></Input>
+
+
+
         </div>
         <div class="form-group">
-            {{ Form::label('telefono') }}
-            {{ Form::text('telefono', $empresa->telefono, ['class' => 'form-control' . ($errors->has('telefono') ? ' is-invalid' : ''), 'placeholder' => 'Telefono']) }}
-            {!! $errors->first('telefono', '<div class="invalid-feedback">:message</p>') !!}
+
+            <label for="">Telefono</label>
+            <Input class="form-control" value="{{isset($empresa->telefono)?$empresa->telefono:''}}" name="telefono" placeholder="Telefono"></Input>
+
+
         </div>
         <div class="form-group">
-            {{ Form::label('correo') }}
-            {{ Form::text('correo', $empresa->correo, ['class' => 'form-control' . ($errors->has('correo') ? ' is-invalid' : ''), 'placeholder' => 'Correo']) }}
-            {!! $errors->first('correo', '<div class="invalid-feedback">:message</p>') !!}
+            
+
+
+            <label for="">Correo</label>
+            <Input class="form-control" value="{{isset($empresa->correo)?$empresa->correo:''}}" name="correo" placeholder="Correo"></Input>
+
+
+           
         </div>
         <div class="form-group">
-            {{ Form::label('direccion') }}
-            {{ Form::text('direccion', $empresa->direccion, ['class' => 'form-control' . ($errors->has('direccion') ? ' is-invalid' : ''), 'placeholder' => 'Direccion']) }}
-            {!! $errors->first('direccion', '<div class="invalid-feedback">:message</p>') !!}
+
+            <label for="">Direccion</label>
+            <Input class="form-control" value="{{isset($empresa->direccion)?$empresa->direccion:''}}" name="direccion" placeholder="Direccion"></Input>
+
         </div>
         <div class="form-group">
-            {{ Form::label('distrito') }}
-            {{ Form::Select('id_distrito',$distrito ,$empresa->id_distrito, ['class' => 'form-control' . ($errors->has('id_distrito') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione']) }}
-            {!! $errors->first('id_distrito', '<div class="invalid-feedback">:message</p>') !!}
+
+            <label for="">Correo</label>
+           
+            
+
+
+            <select name="id_distrito" id="" class="form-select" aria-label="Default select example">
+            
+                <option value="{{isset($empresa->id_distrito)?$empresa->id_distrito:''}}">Seleccione: {{isset($empresa->distrito->nombre)?$empresa->distrito->nombre:''}}</option>
+                @foreach ($distrito as $dis)
+                <option value="{{isset($dis->id)?$dis->id:''}}">{{isset($dis->nombre)?$dis->nombre:''}}</option>
+            @endforeach
+            </select>
+
         </div>
         <div class="form-group">
-            {{ Form::label('asunto') }}
-            {{ Form::text('asunto', $empresa->asunto, ['class' => 'form-control' . ($errors->has('asunto') ? ' is-invalid' : ''), 'placeholder' => 'Asunto']) }}
-            {!! $errors->first('asunto', '<div class="invalid-feedback">:message</p>') !!}
+
+
+            <label for="">Asunto</label>
+            <Input class="form-control" value="{{isset($empresa->asunto)?$empresa->asunto:''}}" name="asunto" placeholder="Asunto"></Input>
+
         </div>
 
     </div>

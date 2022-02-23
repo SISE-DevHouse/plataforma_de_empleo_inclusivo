@@ -13,14 +13,14 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Update Distrito</span>
+                        <span class="card-title">Actualizar Distrito</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('distritos.update', $distrito->id) }}"  role="form" enctype="multipart/form-data">
                             {{ method_field('PATCH') }}
                             @csrf
 
-                            @include('distrito.form')
+                            @include('distrito.form',['valor'=>'Editar'])
 
                         </form>
                     </div>

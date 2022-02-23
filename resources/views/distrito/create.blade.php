@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Create Distrito
+    Crear Distrito
 @endsection
 
 @section('content')
@@ -13,13 +13,13 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Create Distrito</span>
+                        <span class="card-title">Crear Distrito</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('distritos.store') }}"  role="form" enctype="multipart/form-data">
                             @csrf
 
-                            @include('distrito.form')
+                            @include('distrito.form',['valor'=>'Guardar'])
 
                         </form>
                     </div>

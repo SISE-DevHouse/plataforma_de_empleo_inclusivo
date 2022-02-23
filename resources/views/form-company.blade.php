@@ -110,7 +110,7 @@
                         <div class="form-outline mb-3" validate-input m-b-16"
                             data-validate="Requiere ingresar un direccion">
                            
-                        <select name="id_distrito" id="id_distrito" class="form-control">
+                        <select name="id_distrito" id="id_distrito" class="form-select">
 
                         <option class="form-control">Seleccione:</option>
 
