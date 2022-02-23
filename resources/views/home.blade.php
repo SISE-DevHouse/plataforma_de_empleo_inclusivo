@@ -74,8 +74,11 @@
                                 <i class="fas fa-phone"></i>
                             </div>
                             <div class="detail">
-                                {{ Auth::user()->telefono }} <br>
-                                {{ Auth::user()->telefono2 }}
+                                <label for="">TELEFONO</label>
+                                <br>
+                                1) {{ Auth::user()->telefono }} 
+                                <br>
+                                2) {{ Auth::user()->telefono2 }}
                             </div>
                         </div>
                         <div class="contact-box pb0">
@@ -83,6 +86,8 @@
                                 <i class="fas fa-at"></i>
                             </div>
                             <div class="detail">
+                                <label for="">CORREO</label>
+                                <br>
                                 {{ Auth::user()->email }}<br>
 
                             </div>
@@ -92,6 +97,8 @@
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div class="detail">
+                                <label for="">DIRECCIÓN</label>
+                                <br>
                                 {{ Auth::user()->direccion }}
                             </div>
                         </div>
@@ -101,7 +108,8 @@
                                <i class="fas fa-user-shield"></i>
                             </div>
                             <div class="detail">
-                                
+                                <label for="">NOMBRE Y APELLIDOS</label>
+                                <br>
                                {{ isset(Auth::user()->name)?Auth::user()->name:''}}
                                <br>
                                {{ isset(Auth::user()->apellidos)?Auth::user()->apellidos:''}}
@@ -115,9 +123,24 @@
                                 <i class="fas fa-id-card"></i>
                             </div>
                             <div class="detail">
-                                {{ Auth::user()->dni }}
+                                <label for="">DNI</label>
+                                <br>
+                                {{ isset(Auth::user()->dni)?Auth::user()->dni:'' }}
                             </div>
                         </div>
+
+                        <div class="contact-box">
+                            <div class="icon">
+                                <i class="fas fa-id-card"></i>
+                            </div>
+                            <div class="detail">
+                                <label for="" style="color: black;">CARNET DE CONADIS</label>
+                          
+                                <br>
+                                {{ isset(Auth::user()->conadis)?Auth::user()->conadis:'' }}
+                            </div>
+                        </div>
+
 
 
                         <div class="contact-box">
@@ -125,8 +148,12 @@
                                 <i class="fas fa-wheelchair"></i>
                             </div>
                             <div class="detail">
-                                Discapacidad: <br>
+                                Tipo de Discapacidades
+                                <br>
                                 {{Auth::user()->tipodiscapacidad}}
+
+                               
+                                <textarea   readonly style="background-color: #aad8ee;"  id="" cols="23" rows="5" class="form-control" style="border: none;">Descripcion:  {{Auth::user()->desdiscapacidad}}</textarea>
                             </div>
                         </div>
 

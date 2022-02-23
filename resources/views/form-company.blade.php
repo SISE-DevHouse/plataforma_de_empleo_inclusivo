@@ -13,7 +13,7 @@
                 
                         <div class="col-12 py-4 ps-5">
                         
-                        <img src="img/imagen1.jpg" class="img-fluid rounded-pill" alt="">
+                        <img src="img/imagenenviarsolicitud.jpg" class="img-fluid" alt="">
                             <p class="fs-1" style="color: rgb(206, 117, 29);">Conviertete hoy en una empresa inclusiva.
                         </div>
                     </div>
@@ -22,7 +22,7 @@
                 <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
 
                     <form class="login100-form validate-form flex-sb flex-w" method="POST"
-                        action="{{ route('login') }}">
+                        action="{{ route('empresa')}}">
 
                         @csrf
                         <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
@@ -35,9 +35,9 @@
                         <!-- Email input -->
                         <div class="form-outline mb-4 validate-input m-b-16"
                             data-validate="Requiere ingresar el nombre de la empresa">
-                            <input id="nombreEmpresa" type="text"
+                            <input id="nombreempresa" type="text"
                                 class="form-control form-control-lg @error('nombreEmpresa') is-invalid @enderror"
-                                name="nombreEmpresa" value="{{ old('nombreEmpresa') }}" required
+                                name="nombreempresa" value="{{ old('nombreEmpresa') }}" required
                                 placeholder="{{ __('Nombre de la empresa') }}" autofocus>
 
                             @error('nombreEmpresa')
@@ -75,19 +75,19 @@
                         </div>
 
 
-                        <div class="form-outline mb-3" validate-input m-b-16"
-                            data-validate="Requiere ingresar un correo">
-                            <input id="correo"
-                                class="form-control  form-control-lg @error('correo') is-invalid @enderror" type="text"
-                                name="email" placeholder="{{ __('Correo') }} " value="{{ old('email') }}" required
-                                autocomplete="email">
 
+
+                        <div class="form-outline mb-3 validate-input m-b-16" data-validate="Requiere ingresar un correo">
+                            <input id="correo" class="form-control  form-control-lg @error('correo') is-invalid @enderror" type="text" name="correo" placeholder="{{ __('Correo') }} " value="{{ old('correo') }}" required autocomplete="correo">
+    
                             @error('correo')
                             <span class="focus-input100 invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                             @enderror
                         </div>
+    
+    
 
 
 
@@ -107,13 +107,44 @@
 
 
 
+                        <div class="form-outline mb-3" validate-input m-b-16"
+                            data-validate="Requiere ingresar un direccion">
+                           
+                        <select name="id_distrito" id="id_distrito" class="form-control">
 
+                        <option class="form-control">Seleccione:</option>
 
+@isset($distrito)
+    
 
-                        <div class="form-outline mb-3">
-                        <textarea name="asunto" onkeyup="mayuscula(this);" placeholder="ASUNTO.." id="asunto" cols="48" rows="5"></textarea>
                         
+                        @foreach ($distrito as $dis)
+                                
+                        
+                        <option class="form-control" value="{{isset($dis->id)?$dis->id:''}}">{{isset($dis->nombre)?$dis->nombre:''}}</option>
+@endforeach
+                   
+@endisset
+
+                        </select>
+
+
+
+                            @error('direccion')
+                            <span class="focus-input100 invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                         </div>
+
+
+
+
+
+                    <div class="form-outline mb-3">
+                       <textarea class="form-control" name="asunto" onkeyup="mayuscula(this);" placeholder="ASUNTO.." id="asunto" cols="42" rows="5"></textarea>
+                       
+                    </div>
 
 
                         <div class="text-center text-lg-start mt-4 pt-2">

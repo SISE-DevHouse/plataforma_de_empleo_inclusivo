@@ -24,6 +24,12 @@ class EmpresaController extends Controller
             ->with('i', (request()->input('page', 1) - 1) * $empresas->perPage());
     }
 
+
+
+  
+
+
+
     /**
      * Show the form for creating a new resource.
      *

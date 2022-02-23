@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Distrito;
 use App\Models\registroempresas;
+use App\Models\Empresa;
 use Illuminate\Http\Request;
+
 
 class RegistroempresasController extends Controller
 {
@@ -24,10 +27,13 @@ class RegistroempresasController extends Controller
     public function solicitud()
     {
 
-        return view('register-company');
+$distrito = Distrito::paginate();
+
+        return view('register-company',compact('distrito'));
 
         //
     }
+
 
 
 
@@ -53,10 +59,10 @@ class RegistroempresasController extends Controller
     {
         //guardamos todo menos el token
         $arrdatos = request()->except('_token');
-        registroempresas::insert($arrdatos);
+        Empresa::insert($arrdatos);
 
         //return response()->json($arrdatos);
-        return redirect('home/registroempresa');
+        return redirect('/');
     }
 
     /**

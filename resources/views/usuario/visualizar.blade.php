@@ -6,6 +6,7 @@
 
 
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -72,28 +73,16 @@
                                 
                            
                             <div class="detail">
-
-                                {{ isset($perfil->telefono)?$perfil->telefono:''}}
-                                
-                                
-                            </div>
-                        </div>
-
-                        <div class="contact-box pb0">
-                            <div class="icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                        
-                                
-                           
-                            <div class="detail">
-
-                                {{ isset($perfil->telefono2)?$perfil->telefono2:''}}
+                                <label for="">Telefono</label>
+                                <br>
+                                1) {{ isset($perfil->telefono)?$perfil->telefono:''}}
+                                <br>
+                                2) {{ isset($perfil->telefono2)?$perfil->telefono2:''}}
                                 
                             </div>
                         </div>
 
-
+                      
 
 
                         <div class="contact-box pb0">
@@ -101,16 +90,20 @@
                                 <i class="fas fa-at"></i>
                             </div>
                             <div class="detail">
+                                <label for="">Correo</label>
+                                <br>
                                {{ isset($perfil->email)?$perfil->email:''}}
 
                             </div>
                         </div>
+
                         <div class="contact-box">
                             <div class="icon">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div class="detail">
-                                
+                                <label for="">Dirección</label>
+                                <br>
                                 {{ isset($perfil->direccion)?$perfil->direccion:''}}
                             </div>
 
@@ -123,7 +116,8 @@
                                <i class="fas fa-user-shield"></i>
                             </div>
                             <div class="detail">
-                                
+                                <label for="">Nombre y Apellidos</label>
+                                <br>
                                {{ isset($perfil->name)?$perfil->name:''}}
                                <br>
                                {{ isset($perfil->apellidos)?$perfil->apellidos:''}}
@@ -140,19 +134,37 @@
                                 <i class="fas fa-id-card"></i>
                             </div>
                             <div class="detail">
-                                
+                                <label for="">DNI</label>
+                                <br>
                             {{ isset($perfil->dni)?$perfil->dni:''}}
-                            </div>
-
-                        
                         </div>
+                        </div>
+
+                        <div class="contact-box">
+                            <div class="icon">
+                                <i class="fas fa-id-card"></i>
+                            </div>
+                            <div class="detail">
+                                <label for="" style="color: black;">Carnet de Conadis</label>
+                                <br>
+                            {{ isset($perfil->conadis)?$perfil->conadis:''}}
+                        </div>
+                        </div>
+
+
+
+
 
                         <div class="contact-box">
                             <div class="icon">
                                 <i class="fas fa-wheelchair"></i>
                             </div>
                             <div class="detail">
-                             {{isset(Auth::user()->tipodiscapacidad)?Auth::user()->tipodiscapacidad:''}}
+                                <label for="">Tipo de Discapacidad</label>
+                                <br>
+                             {{isset($perfil->tipodiscapacidad)?$perfil->tipodiscapacidad:''}}
+                             <textarea   readonly style="background-color: #aad8ee;"   id="" cols="23" rows="5" class="form-control" style="border: none;">Descripcion:  {{$perfil->desdiscapacidad?$perfil->desdiscapacidad:''}}</textarea>
+                           
                             </div>
                         </div>
 
@@ -162,8 +174,8 @@
                         <h4 class="ltitle">Contacto</h4>
                         <ul class="row social-link no-margin">
 
-                            <li><i class="fab fa-whatsapp"> {{isset(Auth::user()->telefono)?Auth::user()->telefono:''}}</i></li>
-                            <li><i class="fab fa-google-plus-g"> {{ isset(Auth::user()->email)?Auth::user()->email:''}}</i></li>
+                            <li><i class="fab fa-whatsapp"> {{isset($perfil->telefono)?$perfil->telefono:''}}</i></li>
+                            <li><i class="fab fa-google-plus-g"> {{ isset($perfil->email)?$perfil->email:''}}</i></li>
 
 
                         </ul>
@@ -183,7 +195,7 @@
                             <div class="btn-ro row no-margin">
                                 <ul class="btn-link">
                                     <li>
-                                        <a href="{{url('descargarcv', Auth::user()->id)}}"><i class="fas fa-cloud-download-alt"></i>Descargar</a> 
+                                        <a href="{{url('descargarcv', $perfil->id)}}"><i class="fas fa-cloud-download-alt"></i>Descargar</a> 
                                     </li>
                                     
                                 </ul>
@@ -234,10 +246,10 @@
 
 </body>
 
-
 <script src="/assets/js/jquery-3.2.1.min.js"></script>
 <script src="/assets/js/popper.min.js"></script>
 <script src="/assets/js/bootstrap.min.js"></script>
 <script src="/assets/js/script.js"></script>
+
 
 @endsection

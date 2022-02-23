@@ -35,12 +35,19 @@ class User extends Authenticatable
         'habilidades',
         'role',
         'perfil',
+        'conadis',
+        'desdiscapacidad',
+        
 
     ];
 
    
+     
+    
 
+    protected $perPage = 20;
 
+  
   
     /**
      * The attributes that should be hidden for serialization.
