@@ -14,7 +14,7 @@
                             <span class="card-title">Detalle Empresa</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('empresas.index') }}"> Atras</a>
+                            <a class="btn btn-primary" href="{{ route('empresas.index') }}"><i class="fas fa-arrow-left"> Atras</i></a>
                         </div>
                     </div>
 

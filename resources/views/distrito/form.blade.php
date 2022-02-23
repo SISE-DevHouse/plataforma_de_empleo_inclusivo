@@ -2,9 +2,11 @@
     <div class="box-body">
         
         <div class="form-group">
-            {{ Form::label('nombre') }}
-            {{ Form::text('nombre', $distrito->nombre, ['class' => 'form-control' . ($errors->has('nombre') ? ' is-invalid' : ''), 'placeholder' => 'Nombre']) }}
-            {!! $errors->first('nombre', '<div class="invalid-feedback">:message</p>') !!}
+
+            
+            <label for="">Nombre Distrito</label>
+            <Input class="form-control" value="{{isset($distrito->nombre)?$distrito->nombre:''}}" name="nombre" placeholder="Nombre Distrito"></Input>
+
         </div>
 
     </div>

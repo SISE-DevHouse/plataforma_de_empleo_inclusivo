@@ -14,7 +14,7 @@
                             <span class="card-title">Detalle Distrito</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('distritos.index') }}"> Atras</a>
+                            <a class="btn btn-primary" href="{{ route('distritos.index') }}"><i class="fas fa-arrow-left"> Atras</i></a>
                         </div>
                     </div>
 
