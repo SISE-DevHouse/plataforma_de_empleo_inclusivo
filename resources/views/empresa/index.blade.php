@@ -18,7 +18,7 @@
 
                              <div class="float-right">
                                 <a href="{{ route('empresas.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                    <i class="fas fa-newspaper">{{ __('Nueva Empresa') }}</i>
                                 </a>
                               </div>
                         </div>
@@ -28,6 +28,10 @@
                             <p>{{ $message }}</p>
                         </div>
                     @endif
+
+
+                    
+
 
                     <div class="card-body">
                         <div class="table-responsive">

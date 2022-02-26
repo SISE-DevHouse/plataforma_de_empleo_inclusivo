@@ -7,23 +7,23 @@
 @section('content')
    
 
-                    <div class="card-body">
-                        <div class="table-responsive">
 
 
 
 
-<form action="{{route('usuarios.index')}}" method="GET">
-                                <div class="form-row">
-                                    <div class="col-sm-4">
-        <input type="text" class="form-control" id="texto" name="texto" value="{{isset($value)}}" placeholder="Ingrese nombre">
-                                    </div>
-                                    <div class="col-auto">
-                                        <input type="submit" value="BUSCAR" class="btn btn-primary">
-                                    </div>
-                                </div>
 
-                            </form>
+
+                            
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <form class="d-flex" action="{{route('usuarios.index')}}" method="GET">
+        <input class="" style="width : 300px; heigth : 100px"  name="texto" type="search" placeholder="Buscar" aria-label="Search">
+        <button class="btn btn-outline-success btn-lg"  type="submit">Buscar</button>
+   
+      </form>
+    </div>
+  </nav>
+
 
 
 

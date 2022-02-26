@@ -163,7 +163,11 @@
 
 
     <footer
-        class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-1 px-4 px-xl-5 bg-primary">
+        
+    style="  position: absolute;
+    bottom: 0;
+    width: 100%;"
+    class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-1 px-4 px-xl-5 bg-primary">
         <!-- Copyright -->
         <div class="text-white mb-3 mb-md-0">
             Copyright © 2022. Todos los derechos reservados
