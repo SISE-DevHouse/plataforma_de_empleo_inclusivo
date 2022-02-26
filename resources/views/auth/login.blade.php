@@ -9,7 +9,7 @@
             <div class="col-md-9 col-lg-6 col-xl-5">
                 <div class="col-12 py-4 ps-5">
 
-                    <img src="img/imagenlogin.jpg" class="img-fluid">
+                    <img src="img/imagen8.jpg" class="img-fluid">
                 
                 </div>
             </div>

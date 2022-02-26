@@ -71,7 +71,7 @@
 
                             <span><input type="file" name="foto"        id="foto"       class="form-control"></span>
 
-                            <!--falta subir CV creo revisar-->
+                            <!-- -->
                             
                         </div>
 

@@ -13,7 +13,7 @@
                 
                         <div class="col-12 py-4 ps-5">
                         
-                        <img src="img/imagenenviarsolicitud.jpg" class="img-fluid" alt="">
+                        <img src="img/imagen5.jpg" class="img-fluid" alt="">
                             <p class="fs-1" style="color: rgb(206, 117, 29);">Conviertete hoy en una empresa inclusiva.
                         </div>
                     </div>
