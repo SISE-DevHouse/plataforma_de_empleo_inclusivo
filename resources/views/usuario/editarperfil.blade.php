@@ -41,6 +41,12 @@
 </div>
 -->
 
+
+
+
+
+<div style="overflow-y: scroll; height: calc(100% - 80px);">
+
 <form method="POST" action="{{Url('EditarPerfil',Auth::user()->id)}}"  role="form" enctype="multipart/form-data">
     
     {{ method_field('PATCH') }}
@@ -263,6 +269,12 @@
     </div>
 
 </form>
+
+
+</div>
+
+
+
 
 </body>
 

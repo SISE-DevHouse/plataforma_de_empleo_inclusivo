@@ -21,6 +21,10 @@
     -->
 <!--Cuepo-->
 
+
+<div style="overflow-y: scroll; height: calc(100% - 120px);">
+
+
 <div class="container-fluid">
 
     <div class="row bg-light">
@@ -78,7 +82,7 @@
 </div>
 
 
-
+</div>
 
 
 

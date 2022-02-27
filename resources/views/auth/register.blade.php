@@ -8,6 +8,8 @@
 <section>
 
     <div class="container-fluid h-custom py-4">
+        <div class="" style=" overflow-x: hidden; display: block;width: 100%">
+
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-md-9 col-lg-6 col-xl-5">
 
@@ -18,7 +20,7 @@
 
                     <div class="col-12 py-4 ps-5">
 
-                        <img src="img/imagen7.jpg" class="img-fluid " alt="">
+                        <img src="img/imagenregistrarse.jpg" class="img-fluid " alt="">
                         <p class="fs-1" style="color: rgb(206, 117, 29);">Registrate ahora y empieza a tener propuestas laborales.
                     </div>
                 </div>
@@ -92,6 +94,7 @@
                     </div>
                 </form>
             </div>
+        </div>
         </div>
     </div>
 

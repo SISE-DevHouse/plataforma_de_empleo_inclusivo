@@ -5,11 +5,13 @@
 
 <section class="pabsolutetop py-4">
     <div class="container-fluid h-custom">
+        <div class="" style=" overflow-x: hidden; display: block;width: 100%">
+
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-md-9 col-lg-6 col-xl-5">
                 <div class="col-12 py-4 ps-5">
 
-                    <img src="img/imagen8.jpg" class="img-fluid">
+                    <img src="img/imagenlogin.jpg" class="img-fluid">
                 
                 </div>
             </div>
@@ -72,6 +74,7 @@
 
                 </form>
             </div>
+        </div>
         </div>
     </div>
 </section>
