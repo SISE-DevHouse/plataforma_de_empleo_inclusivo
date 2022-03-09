@@ -237,7 +237,7 @@
                         <div class="education">
                             <ul class="row no-margin">
                                 <li class="col-md-6"><span>Educación</span> <br>
-                                    <select name="educacion" id="educacion" class="form-control" required>
+                                    <select name="educacion" id="educacion" class="form-select" required>
                                         <option value="{{ isset($perfil->educacion)?$perfil->educacion:''}}">Seleccione:{{ isset($perfil->educacion)?$perfil->educacion:''}}</option>
                                         <option value="Primaria">Primaria</option>
                                         <option value="Secundaria">Secundaria</option>

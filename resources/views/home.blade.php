@@ -45,6 +45,12 @@
 </div>
 -->
 
+<!-- PARA LOS FOTERS-->
+<div style="overflow-y: scroll; height: calc(100% - 120px);">
+
+
+
+
     <div class="container-fluid overcover">
         <div class="container profile-box">
             <div class="row">
@@ -233,6 +239,7 @@
             </div>
         </div>
     </div>
+</div>
 
 </body>
 
